@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_location_start</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)startLocation {
+    self.isLocationIsEnabled = YES;
+    //判断当前设备版本大于iOS8以后的话执行里面的方法
+    if ([UIDevice currentDevice].systemVersion.floatValue &gt;=8.0) {
+        //持续授权
+         [self.cllocationManager requestAlwaysAuthorization];
+        //当用户使用的时候授权
+        [self.cllocationManager requestWhenInUseAuthorization];
+    }
+    //判断当前设备定位服务是否打开
+    if(![CLLocationManager locationServicesEnabled] || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied){
+        TGLog(@"请开启定位:设置 &gt; 隐私 &gt; 位置 &gt; 定位服务");
+        self.isLocationIsEnabled = NO;
+    }
+    
+    if([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [self.cllocationManager requestAlwaysAuthorization]; // 永久授权
+        [self.cllocationManager requestWhenInUseAuthorization]; //使用中授权
+    }
+    
+    [self.locationManager startUpdatingLocation];
+    
+    if (!self.isLocationIsEnabled) {
+        UIAlertController *vc = [UIAlertController alertControllerWithTitle:nil message:@"您的手机目前未开启定位服务，请开启定位服务功能" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+        [vc addAction:cancelAction];
+        UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"去设置" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+        }];
+        [vc addAction:sureAction];
+        [self presentViewController:vc animated:YES completion:nil];
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B873F081-7683-4444-BC53-74EE8D140879</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>定位权限获取判断</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

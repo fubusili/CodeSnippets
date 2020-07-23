@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_custome search bar</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        UITextField *textfield = [_searchBar valueForKey:@"_searchField"];
+        [textfield setValue:HexColor(0xbfbfbf) forKeyPath:@"_placeholderLabel.textColor"];
+        textfield.backgroundColor = HexColor(0xF8F9FC);
+        [textfield setValue:SYSTEMFONT(13) forKeyPath:@"_placeholderLabel.font"];
+        textfield.font = SYSTEMFONT(13);
+        textfield.textColor = HexColor(0x333333);</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>96895ABC-F1E9-44BE-B288-0F31771E5D62</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>自定义搜索框字体等信息</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>custome search bar</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

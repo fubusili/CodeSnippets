@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_cell selected back view</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIView *selectedBackView = [[UIView alloc]initWithFrame:cell.bounds];
+    selectedBackView.backgroundColor = HexColor(0xf8f9fc);
+    cell.selectedBackgroundView = selectedBackView;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B70CE1A4-9E58-40AB-984E-C6DBF51A05A1</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>cell 点击效果</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>cell selected back view</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

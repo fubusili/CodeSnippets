@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_table_header_footer</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier {
+    if (self = [super initWithReuseIdentifier:reuseIdentifier]) {
+        [self setupSubviews];
+    }
+    return self;
+}
+
+#pragma mark - Publice method
++ (instancetype)initHeaderWithTableView:(UITableView *)tableView {
+    TGLeadToCustomerHeaderView *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:kTGLeadToCustomerHeaderView];
+    if (!header) {
+        header = [[TGLeadToCustomerHeaderView alloc] initWithReuseIdentifier:kTGLeadToCustomerHeaderView];
+    }
+    return header;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E1F719E9-CB3C-49E4-B56C-187E2AA6CE24</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>header footer view</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

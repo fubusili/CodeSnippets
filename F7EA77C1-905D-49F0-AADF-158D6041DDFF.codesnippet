@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_ more_arrow_btn</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UIButton *)moreBtn {
+    if (!_moreBtn) {
+        _moreBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _moreBtn.userInteractionEnabled = NO;
+        [_moreBtn setImage:[UIImage imageWithName:@"cell_more_arrow" bundle:@"TGCRMKit" targetClass:NSClassFromString(@"TGDeparmentUserSelectedViewCell")] forState:UIControlStateNormal];
+    }
+    return _moreBtn;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F7EA77C1-905D-49F0-AADF-158D6041DDFF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>more btn</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

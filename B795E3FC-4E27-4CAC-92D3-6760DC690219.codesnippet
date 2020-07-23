@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_tap_string_yytext</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSString *normalTips = &lt;#@"以查看联系方式"#&gt;;
+NSString *tapTips = &lt;#@"添加到CRM "#&gt;;
+        NSString *tips = [NSString stringWithFormat:@"%@%@",tapTips,normalTips];
+        NSMutableAttributedString *attribuedStr = [[NSMutableAttributedString alloc] initWithString:tips];
+        [attribuedStr setYy_font:[UIFont systemFontOfSize:14]];
+        [attribuedStr setYy_color:[UIColor tg_fontLightLightLightGrayColor]];
+        if (tapTips.length) {
+            [attribuedStr yy_setTextHighlightRange:[tips rangeOfString:tapTips] color:[UIColor tg_mainThemeColor] backgroundColor:nil tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+                if (&lt;#weak_self.addToCRMBlock#&gt;) {
+                    &lt;#weak_self.addToCRMBlock()#&gt;;
+                }
+            }];
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B795E3FC-4E27-4CAC-92D3-6760DC690219</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>tap string YYText</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

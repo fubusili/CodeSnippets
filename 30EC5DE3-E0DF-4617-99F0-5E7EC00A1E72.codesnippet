@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_collectionview_delegate</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - UICollectionViewDelegate
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.titles.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    TGUIHomeCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kTGUIHomeCollectionCell forIndexPath:indexPath];
+    [cell showTitle:self.titles[indexPath.item] imageStr:self.titles[indexPath.item]];
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+    //当cell高亮时返回是否高亮
+    return YES;
+}
+
+- (void)collectionView:(UICollectionView *)colView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell* cell = [colView cellForItemAtIndexPath:indexPath];
+    //设置(Highlight)高亮下的颜色
+    [cell setBackgroundColor:[UIColor tg_backgroundLightGrayColor]];
+}
+
+- (void)collectionView:(UICollectionView *)colView  didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell* cell = [colView cellForItemAtIndexPath:indexPath];
+    // 延时是为了单击也可以看到效果
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(),^{
+        //设置(Nomal)正常状态下的颜色
+       [cell setBackgroundColor:[UIColor whiteColor]];
+    });
+}
+
+#pragma mark - Setter and getter
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+        CGFloat width = SCREEN_WIDTH/3;
+        layout.itemSize = CGSizeMake(width, 102);
+        layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+        layout.minimumInteritemSpacing = 0;
+        layout.minimumLineSpacing = 0;
+        
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        [_collectionView registerClass:[TGUIHomeCollectionCell class] forCellWithReuseIdentifier:kTGUIHomeCollectionCell];
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        _collectionView.delaysContentTouches = false;
+    }
+    return _collectionView;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>30EC5DE3-E0DF-4617-99F0-5E7EC00A1E72</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>collection view delegate and getter</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
