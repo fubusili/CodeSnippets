@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_pod_library_path</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>pod '&lt;#TGClueKit#&gt;', :path =&gt; '../&lt;#TGClueKit#&gt;'</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9D692948-4EA0-4013-97C4-948FDD7763D8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Ruby</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>podfile pod path</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

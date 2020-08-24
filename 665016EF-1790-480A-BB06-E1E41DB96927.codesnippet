@@ -3,21 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_podfile_pod_path</string>
+	<string>x_getter_object</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>pod '&lt;#TGToolsKit#&gt;', :path=&gt;'../&lt;#TGToolsKit#&gt;'</string>
+	<string>- (&lt;#Class#&gt; *)&lt;#propertyName#&gt; {
+    if (!_&lt;#propertyName#&gt;) {
+        _&lt;#propertyName#&gt; = [[&lt;#Class#&gt; alloc] init];
+    }
+    return _&lt;#propertyName#&gt;;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>CBDC5E19-1283-463D-9A15-6FAC638BF621</string>
+	<string>665016EF-1790-480A-BB06-E1E41DB96927</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Ruby</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>podfile pod path</string>
+	<string>object getter</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
