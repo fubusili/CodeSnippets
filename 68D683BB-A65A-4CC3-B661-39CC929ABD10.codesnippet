@@ -3,23 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_guard_else_swift</string>
+	<string>x_bezier_path_swift</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>guard let strongSelf = self else {
-                return
-            }</string>
+	<string>let path = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: [.topLeft,.topRight], cornerRadii: CGSize(width: 15, height: 15))
+        let shape = CAShapeLayer()
+        shape.frame = &lt;#view#&gt;.bounds
+        shape.path = path.cgPath
+        &lt;#view#&gt;.layer.mask = shape</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>56325B8A-2AA8-4D38-BB17-E99554F43FF9</string>
+	<string>68D683BB-A65A-4CC3-B661-39CC929ABD10</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>guard let else</string>
+	<string>corner bezier path</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

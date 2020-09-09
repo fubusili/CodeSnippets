@@ -3,23 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_guard_else_swift</string>
+	<string>x_property_didset_swift</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>guard let strongSelf = self else {
-                return
-            }</string>
+	<string>var &lt;#value#&gt;: String = "" {
+    didSet{
+      
+    }
+  }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>56325B8A-2AA8-4D38-BB17-E99554F43FF9</string>
+	<string>79980A8B-34D4-4177-BFC6-537A828CFFC6</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>guard let else</string>
+	<string>property did set</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,23 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_guard_else_swift</string>
+	<string>x_btn_click_swfit</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>guard let strongSelf = self else {
-                return
-            }</string>
+	<string>    @objc private func btnClick() {
+        print("👉 \(NSStringFromClass(&lt;#TGClueHomeTableHeaderNearbyView#&gt;.self)) btn click")
+        btnClickBlock?(nil)
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>56325B8A-2AA8-4D38-BB17-E99554F43FF9</string>
+	<string>B6DD7497-2704-4E42-B5BD-FEFCD1D2D34D</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>guard let else</string>
+	<string>btn click action </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

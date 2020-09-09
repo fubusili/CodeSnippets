@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_btn_swift</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>lazy var btn: UIButton = {
+        let btn = UIButton.init(type: .system)
+    btn.addTarget(self, action: #selector(&lt;#callClick#&gt;), for: UIControl.Event.touchUpInside)
+        btn.backgroundColor = UIColor.init(hexString: "#EBF6FF")
+        btn.layer.cornerRadius = 6
+        btn.layer.masksToBounds = true
+        btn.setTitleColor(UIColor.init(hexString: "#0088FF", alpha: 1), for: .normal)
+        btn.contentHorizontalAlignment = .left
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        btn.setImage(UIImage(named: "home_call_blue"), for: .normal)
+        btn.setTitle("020-38383838 更多（666）", for: .normal)
+        return btn
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BD4CBF0E-CE82-4F5A-864E-4B03C63E5137</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>button swift</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
