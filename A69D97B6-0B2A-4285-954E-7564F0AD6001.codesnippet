@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_collectionview_lazy_swift</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private lazy var collectionView: UICollectionView = {
+    let collectionView = setupCollectionView(CGRect.zero, self, self, collectionViewLayout)
+    collectionView.backgroundColor = .clear
+    collectionView.showsHorizontalScrollIndicator = false
+    collectionView.showsVerticalScrollIndicator = false
+    collectionView.isUserInteractionEnabled = false
+    registerCollectionCell(collectionView, TGToolTagCollectionViewCell.self)
+    return collectionView
+}()
+
+private lazy var collectionViewLayout: TGToolTagCollectionViewLayout = {
+    let collectionViewLayout = TGToolTagCollectionViewLayout()
+    collectionViewLayout.delegate = self
+    collectionViewLayout.itemHeight = 19
+    collectionViewLayout.tagInnerMargin = 12
+    collectionViewLayout.itemSpacing = 4
+    collectionViewLayout.isJustShowSingleRow = true
+    collectionViewLayout.itemFont = UIFont.systemFont(ofSize: 11)
+    return collectionViewLayout
+}()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A69D97B6-0B2A-4285-954E-7564F0AD6001</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>collecitonView lazy property</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

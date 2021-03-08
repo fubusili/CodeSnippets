@@ -3,24 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_lazy_var_swift</string>
+	<string>x_customer_detail_push</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private lazy var &lt;#property name#&gt;: &lt;#type name#&gt; = {
-        &lt;#statements#&gt;
-        return &lt;#value#&gt;
-    }()</string>
+	<string>let vc = TGCRMCustomerDetailController()
+        if let model = self.list[indexPath.row] as? TGCRMCustomerModel {
+            vc.id = model._id
+            vc.businessType = .customer_pool
+            self.navigationController?.pushViewController(vc, animated: true)
+        }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6F1EB455-EB24-4ED4-8AD4-91D16FE83EED</string>
+	<string>458DBBE5-53ED-4FF2-8645-05C37FE4AC4C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lazy var property</string>
+	<string>push to customer detail</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

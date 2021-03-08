@@ -3,27 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_lazy_var_swift</string>
+	<string>x_table_delete_animation</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private lazy var &lt;#property name#&gt;: &lt;#type name#&gt; = {
-        &lt;#statements#&gt;
-        return &lt;#value#&gt;
-    }()</string>
+	<string>DispatchQueue.main.after(0) {
+                        self.tableView.beginUpdates()
+                        self.list.remove(at: indexPath.row)
+                        self.tableView.deleteRows(at: [indexPath], with: .left)
+                        self.tableView.endUpdates()
+                    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6F1EB455-EB24-4ED4-8AD4-91D16FE83EED</string>
+	<string>F4E6A147-B78A-4E10-A7AA-91D8602AD975</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lazy var property</string>
+	<string>table deletae animation</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

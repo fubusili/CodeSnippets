@@ -10,7 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>&lt;#object#&gt;.mas_makeConstraints({ make in
-            
+    &lt;#make#&gt;
         })</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>0BCA7583-0E33-477A-B1A0-E441D234BCF7</string>

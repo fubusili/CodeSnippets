@@ -3,24 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_lazy_var_swift</string>
+	<string>x_didset_property</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private lazy var &lt;#property name#&gt;: &lt;#type name#&gt; = {
-        &lt;#statements#&gt;
-        return &lt;#value#&gt;
-    }()</string>
+	<string>private var poolTitleList: [Any]? {
+        didSet {
+            if oldValue != poolTitleList {
+                &lt;#code#&gt;
+            }
+        }
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6F1EB455-EB24-4ED4-8AD4-91D16FE83EED</string>
+	<string>1D15D2DE-C2C2-4BFB-91B9-F4067095C413</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lazy var property</string>
+	<string>var did set property</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

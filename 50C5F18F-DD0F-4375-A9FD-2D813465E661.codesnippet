@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>func setupSubviews() {
+	<string>private func setupSubviews() {
         &lt;#function body#&gt;
     }</string>
 	<key>IDECodeSnippetIdentifier</key>

@@ -3,24 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_lazy_var_swift</string>
+	<string>x_alert_swift</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private lazy var &lt;#property name#&gt;: &lt;#type name#&gt; = {
-        &lt;#statements#&gt;
-        return &lt;#value#&gt;
-    }()</string>
+	<string>let alert = UIAlertController(title: "提示", message: "确定清除所有最近搜索？", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { (action) in
+                TGSearchPageDAO().clearAllHistoryKeys()
+                strongSelf.loadSearchData()
+            }))
+            strongSelf.goToNextViewController(alert, .present, true)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6F1EB455-EB24-4ED4-8AD4-91D16FE83EED</string>
+	<string>FE9FCFDE-282F-4137-BB28-94B9D0DEB927</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>lazy var property</string>
+	<string>alert view controller </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>tgmakeapi</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    static let &lt;#url name#&gt;: TGApiUrl = (&lt;#api name#&gt;, &lt;#api url#&gt;)
+    @discardableResult
+/// &lt;#function description#&gt;
+    @objc static func &lt;#function name#&gt;(with &lt;#parameters#&gt;, success: ((Any)-&gt;Void)?, failure: TGApiFailureBlock?) -&gt; TGNetworkRequestInfo? {
+
+        guard let &lt;#check parameters nil#&gt; else {
+            handleFailureParameterError(with: failure)
+            return nil
+        }
+
+        return TGNetworkManager.shareInstnace()?.request(with: &lt;#T##HttpRequestType#&gt;, urlString: &lt;#T##String!#&gt;, parameters: &lt;#T##[AnyHashable : Any]?#&gt;, headerParams: &lt;#T##[AnyHashable : Any]?#&gt;, needLogDetail: .detail, apiName: &lt;#T##String?#&gt;, successBlock: { (obj) in
+            
+            if let success = success {
+                &lt;#parsing#&gt;
+            }
+            
+        }, failureBlock: { (error, statusCode, errInfo) in
+            handleFailure(with: failure, error: error, statusCode: statusCode, errorInfo: errInfo)
+        })
+
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4137162B-B3FA-4F08-88B1-CF02EA9CC980</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>TGApi</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

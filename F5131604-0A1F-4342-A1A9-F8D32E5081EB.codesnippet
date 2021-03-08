@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>[weak self]</string>
+	<string>[weak self] (&lt;#object#&gt;) in</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>F5131604-0A1F-4342-A1A9-F8D32E5081EB</string>
 	<key>IDECodeSnippetLanguage</key>

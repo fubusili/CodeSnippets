@@ -10,8 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>    @objc private func btnClick() {
-        print("👉 \(NSStringFromClass(&lt;#TGClueHomeTableHeaderNearbyView#&gt;.self)) btn click")
-        btnClickBlock?(nil)
+        btnClickHandle?(nil)
     }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>B6DD7497-2704-4E42-B5BD-FEFCD1D2D34D</string>

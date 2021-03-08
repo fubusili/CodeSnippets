@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_yymodel_init_swift</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>required convenience init?(coder aDecoder: NSCoder) {
+        self.init(coder: aDecoder)
+        self.yy_modelInit(with: aDecoder)
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        self.yy_modelEncode(with: aCoder)
+    }
+    
+    override var description: String {
+        return yy_modelDescription()
+    }
+    
+    static func modelContainerPropertyGenericClass() -&gt; [String : Any]? {
+        return ["address_config":TGClueHomeSearchFilterItem.classForCoder(),
+                "contact_config":TGClueHomeSearchFilterItem.classForCoder(),
+                "other_config":TGClueHomeSearchFilterItem.classForCoder()
+               ]
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CFD12079-457F-4CFE-9ECF-4C2D882D25C0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>subclass yymodel init</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

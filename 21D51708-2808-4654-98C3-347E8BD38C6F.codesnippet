@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_request_list</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private func requestList(_ isLoadMore: Bool = false, isShowLoading: Bool = true, completion: requestCompletionHandle? = nil) {
+    if poolID == nil {
+        return
+    }
+    
+    if isShowLoading {
+        self.view.showInteractiveHud()
+    }
+    var begin: Int = 0
+    var end: Int = 20
+    var nextSearchAfter: String? = nil
+    if isLoadMore {
+        begin = listCount
+        end = begin + 20
+        if let next = listModel?.next_search_after {
+            nextSearchAfter = next
+        }
+    }
+    self.request(begin, end: end, nextSearchAfter: nextSearchAfter) { (listModel) in
+        self.listModel = listModel as? TGCRMCustomListModel
+        if let model = listModel as? TGCRMCustomListModel, model.customers.count &gt; 0 {
+            if isLoadMore {
+                self.list.append(contentsOf: model.customers)
+            }
+            else {
+                self.list.removeAll()
+                self.list.append(contentsOf: model.customers)
+            }
+            DispatchQueue.main.after(0) {
+                self.tableView.reloadData()
+            }
+        }
+    }
+}
+private func request(_ begin: Int, end: Int, completion:requestCompletionHandle?) {
+        self.request?.cancel()
+        self.request = TGNetworkManager.requestList(begin, end: end, status: toDoType.rawValue, successHandle: {(info) in
+            completion?(info)
+        }, failureHandle: { (errMsg, error, statusCode, errorInfo) in
+            if let msg = errMsg as? String, msg.count &gt; 0 {
+                self.showError(msg, hideAfterDelay: 1.5)
+            }
+            DispatchQueue.main.after(1.5) {
+                completion?(nil)
+            }
+        })
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>21D51708-2808-4654-98C3-347E8BD38C6F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>request list data </string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

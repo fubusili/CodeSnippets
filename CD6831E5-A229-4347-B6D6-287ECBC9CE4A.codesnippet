@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_collectionview_delegate_swift</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension TGClueHomeRecommendCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -&gt; Int {
+        return tags.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -&gt; UICollectionViewCell {
+        let cell:TGClueHomeRecommendCellCollectionCell = setupCollectionCell(collectionView, TGClueHomeRecommendCellCollectionCell.self, indexPath)
+        let model: TGToolTagModel = tags[indexPath.item] ?? TGToolTagModel()
+        cell.setupTagInfo(model)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("👉 collection view cell did click \(indexPath.row)")
+    }
+}
+
+extension TGClueHomeRecommendCell: TGToolTagCollectionViewLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView, contentHeight: CGFloat, atSection section: Int) {
+        // 更新collection view 高度，从而更新 table view ce ll 高度(设置自适应高度)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, indexPath: IndexPath) -&gt; String {
+        return tags[indexPath.row].name ?? ""
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CD6831E5-A229-4347-B6D6-287ECBC9CE4A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>collection view delegate </string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -10,12 +10,12 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>lazy var btn: UIButton = {
-        let btn = UIButton.init(type: .system)
-    btn.addTarget(self, action: #selector(&lt;#callClick#&gt;), for: UIControl.Event.touchUpInside)
-        btn.backgroundColor = UIColor.init(hexString: "#EBF6FF")
+        let btn = UIButton(type: .custom)
+    btn.addTarget(self, action: #selector(&lt;#btnClick#&gt;), for: UIControl.Event.touchUpInside)
+        btn.backgroundColor = UIColor(hexString: "#EBF6FF")
         btn.layer.cornerRadius = 6
         btn.layer.masksToBounds = true
-        btn.setTitleColor(UIColor.init(hexString: "#0088FF", alpha: 1), for: .normal)
+        btn.setTitleColor(UIColor(hexString: "#0088FF", alpha: 1), for: .normal)
         btn.contentHorizontalAlignment = .left
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         btn.setImage(UIImage(named: "home_call_blue"), for: .normal)

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_request_func</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class func requestRecommendList(successHandle:requestCompletionHandle?, failureHandle:requesetFailureHandle?) -&gt; TGNetworkRequestInfo? {
+    let urlStr = &lt;#url#&gt;
+        
+        let request:TGNetworkRequestInfo = (TGNetworkManager.shareInstnace()?.request(with: .get, urlString: urlStr, parameters: nil, headerParams: nil, successBlock: { (obj) in
+            let info: &lt;#model#&gt; = &lt;#model#&gt;.yy_model(withJSON: obj)!
+            successHandle?(info)
+        }, failureBlock: { (error, statusCode, errInfo) in
+            let errMsg: String = TGNetworkErrorBaseHandler.getFinalErrMessage(withStatusCode: statusCode, errCode: errInfo != nil ? Int32(errInfo!.err) : statusCode)
+            failureHandle?(errMsg, error, Int(statusCode), errInfo)
+        }))!
+        return request
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>99E52E28-9C3A-4039-97F1-8BAD49932254</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>request func</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -13,7 +13,7 @@
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 17)
         label.text = ""
-        label.textColor = UIColor.homeLabelBlackColor(withAlpha: 1)
+        label.textColor = UIColor.tg_defaultLabel(withAlpha: 1)
         label.textAlignment = .left
         label.numberOfLines = 0
         return label
