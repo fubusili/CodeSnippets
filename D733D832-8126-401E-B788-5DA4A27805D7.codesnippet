@@ -3,24 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_tableview_lazy_property_swift</string>
+	<string>x_table_property_swift</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var tableView: UITableView = {
-        let tabBarHeight = UIView.tg_bottomInsets + 49.0 /* tabBar heigth */
-        let naviBarHeight = UIView.tg_topInsets + 44.0 /* navigtion heigth */
-        let hoverHeight: CGFloat = 48.0 /* scroll view hover */
-        let other: CGFloat = tabBarHeight + naviBarHeight  + hoverHeight
-        let H: CGFloat = self.bounds.height - other
-        let tableView = setupTableView(CGRect(x: 0, y: hoverHeight, width: self.bounds.width, height: H), self, self, .plain)
+	<string>private lazy var tableView: UITableView = {
+    let tableView = setupTableView(.zero, self, self, .plain)
         tableView.showsHorizontalScrollIndicator = false
         tableView.showsVerticalScrollIndicator = false
         registerCell(withTableView: tableView, TGToolPhoneCallListViewCell.self)
         tableView.estimatedRowHeight = 100
-        tableView.backgroundColor = UIColor.white()
+    tableView.backgroundColor = .white
         return tableView
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>

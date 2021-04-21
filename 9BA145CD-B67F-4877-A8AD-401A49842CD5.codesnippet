@@ -9,9 +9,11 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>didSet{
-            
-        }</string>
+	<string>didSet {
+    if oldValue != &lt;#code#&gt; {
+        &lt;#code#&gt;
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>9BA145CD-B67F-4877-A8AD-401A49842CD5</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -19,7 +21,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>did set {}</string>
+	<string>did set</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

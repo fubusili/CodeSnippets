@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_pull_menu_delegate</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// MARK: - 客户下拉菜单
+extension TGCustomerMainListVC: TGPullDownMenuViewDelegate  {
+    
+    /// 处理头部视图偏移
+    func handleScrollViewDidScroll(_ scrollView: UIScrollView) {
+        // 列表实际偏移
+        let listOffset = scrollView.contentOffset.y + topViewHeight
+        // 向下拉 列表偏移为负数 这时候 顶部view需要跟着向下移动
+        let topViewOffsetY = -Swift.min(0, listOffset)
+        // 头部跟着动
+        topView.mas_updateConstraints { make in
+            make?.top.equalTo()(view)?.offset()(topViewOffsetY)
+        }
+        // 同时下拉不能编辑
+        topView.isUserInteractionEnabled = topViewOffsetY == 0
+        // 添加按钮跟着动
+        addButton.mas_updateConstraints { make in
+            make?.bottom.equalTo()(containerScrollView)?.offset()(-20 - (tabBarController?.tabBar.frame.size.height ?? 0) + topViewOffsetY)
+        }
+    }
+    
+    private func setupPullDownMenu() {
+        setupPullDownMenu(superView: mycustomerTab)
+        self.menuView.threshold = 0.15
+        self.menuView.contentHeight = UIView.screnHeight()
+    }
+    
+    private func setupPullDownMenu(superView: UIScrollView) {
+        superView.height = UIView.screnHeight() - ( self.tabBarController?.tabBar.height)!
+        superView.addSubview(self.menuView)
+    }
+    
+    // MARK: delegate
+    func menu(statusChanged status: Bool) {
+        
+    }
+    
+    func menu(willShowOrHidden: Bool) {
+        self.navigationController?.tabBarController?.tabBar.isUserInteractionEnabled = !willShowOrHidden
+    }
+    
+    func menu(showOrHidden: Bool, completion: Bool) {
+        if completion {
+            // 隐藏导航栏
+            self.tabBarController?.tabBar.alpha = showOrHidden ? 0.0 : 1.0
+        }
+    }
+    
+    func menu(refresh: Bool) {
+        if refresh {
+            refreshNew(listType: self.listType)
+        }
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B62026D7-E0CC-4603-82C8-84700368EDAC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>pull donw menu delegate</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

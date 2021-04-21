@@ -3,27 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string></string>
+	<string>x_convenience_init</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupSubviews()
-    }
-    private func setupSubviews() {
-        
-    }</string>
+	<string>public convenience init(frame: CGRect, targetView: UIView) {
+    self.init(frame: frame)
+    targetView.addSubview(self)
+    setupSubviews()
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>774D6858-3B68-4D12-815F-99A23E0469C4</string>
+	<string>6300EAFB-D6B6-430D-9B32-7234F7BC038F</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>My Code Snippet</string>
+	<string>convenience init</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

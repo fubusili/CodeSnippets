@@ -3,26 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_table_delete_animation</string>
+	<string>x_description_oc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DispatchQueue.main.after(0) {
-                        self.tableView.beginUpdates()
-                        self.list.remove(at: indexPath.row)
-                        self.tableView.deleteRows(at: [indexPath], with: .left)
-                        self.tableView.endUpdates()
-                    }</string>
+	<string>[NSDate timeStringWithTimeInterval:self.checkinModel.server_time/1000 formatStr:@"yyyy-MM-dd"]</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F4E6A147-B78A-4E10-A7AA-91D8602AD975</string>
+	<string>CE116F0E-4C26-4B13-B24D-C946C36131BA</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>table deletae animation</string>
+	<string>time description</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

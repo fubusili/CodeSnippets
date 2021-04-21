@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_gradient_shadow_swift</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// 添加渐变layer到按钮最底层，避免遮住title
+    CAGradientLayer *subLayer = [CAGradientLayer layer];
+    subLayer.frame = CGRectMake(0, 0, self.width, self.width);
+    [self.btn.layer insertSublayer:subLayer atIndex:0];
+
+    // 使用渐变色
+    subLayer.colors = @[(__bridge id)self.gradientColors.firstObject.CGColor,
+                        (__bridge id)self.gradientColors.lastObject.CGColor];
+    // 开始点
+    subLayer.startPoint = CGPointMake(0, 0);
+    // 结束点
+    subLayer.endPoint = CGPointMake(1, 1);
+
+    // 使用圆角
+    subLayer.cornerRadius = self.width/2;
+
+    // 使用阴影
+    subLayer.shadowColor = self.gradientColors.lastObject.CGColor;
+    subLayer.shadowOffset = CGSizeMake(0, 0);
+    subLayer.shadowOpacity = 0.1;
+    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(-5,-5, self.width + 10, self.width + 10) cornerRadius:self.width/2];
+    //阴影路径
+    subLayer.shadowPath = path.CGPath;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F06A3B63-39D5-402C-B1D5-4AB8B052109C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>gradient </string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

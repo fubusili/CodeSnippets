@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_shadow_corner</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// 圆角
+        let mask = UIBezierPath(roundedRect: view.bounds, byRoundingCorners: [.topLeft,.topRight], cornerRadii: CGSize(width: 16, height: 16))
+        let shape = CAShapeLayer()
+        shape.frame = view.bounds
+        shape.path = mask.cgPath
+        view.layer.mask = shape
+
+        // 添加扩散阴影
+        let bpath = UIBezierPath(roundedRect: CGRect(x: 0, y: -10, width: view.width, height: view.height + 20), cornerRadius: 16)
+        shape.shadowColor = UIColor.tg_defaultLabel(withAlpha: 1).cgColor
+        shape.shadowOffset = CGSize(width: 0, height: 0);
+        shape.shadowOpacity = 0.1;
+        shape.shadowPath = bpath.cgPath</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BED10202-5599-4814-908A-EEFD13391A3A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>shodow corner</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

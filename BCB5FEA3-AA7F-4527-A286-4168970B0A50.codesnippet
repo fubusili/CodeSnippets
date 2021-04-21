@@ -3,26 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_table_delete_animation</string>
+	<string>x_tap_gesture</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DispatchQueue.main.after(0) {
-                        self.tableView.beginUpdates()
-                        self.list.remove(at: indexPath.row)
-                        self.tableView.deleteRows(at: [indexPath], with: .left)
-                        self.tableView.endUpdates()
-                    }</string>
+	<string>let tap = UITapGestureRecognizer(target: self, action: #selector(btnClick))
+        self.addGestureRecognizer(tap)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F4E6A147-B78A-4E10-A7AA-91D8602AD975</string>
+	<string>BCB5FEA3-AA7F-4527-A286-4168970B0A50</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>table deletae animation</string>
+	<string>tap gesture</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

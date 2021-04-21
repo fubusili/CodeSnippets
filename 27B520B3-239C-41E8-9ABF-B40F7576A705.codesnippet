@@ -3,26 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_table_delete_animation</string>
+	<string>x_list_filter</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DispatchQueue.main.after(0) {
-                        self.tableView.beginUpdates()
-                        self.list.remove(at: indexPath.row)
-                        self.tableView.deleteRows(at: [indexPath], with: .left)
-                        self.tableView.endUpdates()
-                    }</string>
+	<string>list.filter({ $0.isSeleccted }).count</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F4E6A147-B78A-4E10-A7AA-91D8602AD975</string>
+	<string>27B520B3-239C-41E8-9ABF-B40F7576A705</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>table deletae animation</string>
+	<string>list filter</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

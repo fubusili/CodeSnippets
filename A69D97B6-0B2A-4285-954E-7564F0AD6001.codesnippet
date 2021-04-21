@@ -9,12 +9,19 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private lazy var collectionView: UICollectionView = {
+	<string>public var tags: [TGToolTagModel] = [] {
+    didSet {
+        if oldValue != tags {
+            collectionView.reloadData()
+        }
+    }
+}
+private lazy var collectionView: UICollectionView = {
     let collectionView = setupCollectionView(CGRect.zero, self, self, collectionViewLayout)
     collectionView.backgroundColor = .clear
     collectionView.showsHorizontalScrollIndicator = false
     collectionView.showsVerticalScrollIndicator = false
-    collectionView.isUserInteractionEnabled = false
+//    collectionView.isUserInteractionEnabled = false
     registerCollectionCell(collectionView, TGToolTagCollectionViewCell.self)
     return collectionView
 }()

@@ -3,26 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_table_delete_animation</string>
+	<string>x_gesture_multi</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DispatchQueue.main.after(0) {
-                        self.tableView.beginUpdates()
-                        self.list.remove(at: indexPath.row)
-                        self.tableView.deleteRows(at: [indexPath], with: .left)
-                        self.tableView.endUpdates()
-                    }</string>
+	<string>func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -&gt; Bool {
+        if (gestureRecognizer is UIPanGestureRecognizer || gestureRecognizer is UIRotationGestureRecognizer) {
+            return true
+        }
+        else {
+            return false
+        }
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F4E6A147-B78A-4E10-A7AA-91D8602AD975</string>
+	<string>590D12A6-ED25-4D50-8C71-DAAE7F216CCF</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>table deletae animation</string>
+	<string>multil gesture</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

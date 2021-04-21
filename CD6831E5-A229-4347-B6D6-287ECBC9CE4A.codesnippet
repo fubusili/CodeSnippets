@@ -11,13 +11,15 @@
 	<key>IDECodeSnippetContents</key>
 	<string>extension TGClueHomeRecommendCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -&gt; Int {
-        return tags.count ?? 0
+        return tags.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -&gt; UICollectionViewCell {
-        let cell:TGClueHomeRecommendCellCollectionCell = setupCollectionCell(collectionView, TGClueHomeRecommendCellCollectionCell.self, indexPath)
-        let model: TGToolTagModel = tags[indexPath.item] ?? TGToolTagModel()
-        cell.setupTagInfo(model)
+        let cell = setupCollectionCell(collectionView, TGToolTagCollectionViewCell.self, indexPath)
+        if tags.count &gt; indexPath.item {
+            let model: TGToolTagModel = tags[indexPath.item]
+            cell.setupTagInfo(model)
+        }
         return cell
     }
     
@@ -28,7 +30,7 @@
 
 extension TGClueHomeRecommendCell: TGToolTagCollectionViewLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, contentHeight: CGFloat, atSection section: Int) {
-        // 更新collection view 高度，从而更新 table view ce ll 高度(设置自适应高度)
+        // 更新collection view 高度，从而更新 table view cell 高度(设置自适应高度)
     }
     
     func collectionView(_ collectionView: UICollectionView, indexPath: IndexPath) -&gt; String {
