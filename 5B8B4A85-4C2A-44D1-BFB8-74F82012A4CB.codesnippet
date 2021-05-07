@@ -3,31 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_no data view</string>
+	<string>x_yy_custome</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (TGToolNoDataView *)noDataView {
-    if (!_noDataView) {
-        _noDataView = [TGToolNoDataView noDataWithType:TGToolNoDataViewTypeCustom];
-        _noDataView.isContentShouldBeTopCenter = YES;
-        _noDataView.imageStr = @"TG_COMMON_NO_DATA_TIPS";
-        _noDataView.tips = @"搜索不到内容哦";
-        _noDataView.itemVerticalSpace = [NSNumber numberWithFloat:32];
+	<string>public static func modelCustomPropertyMapper() -&gt; [String : Any]? {
+        return ["config":"search_config"]
     }
-    return _noDataView;
-}
-</string>
+    
+    static func modelContainerPropertyGenericClass() -&gt; [String : Any]? {
+        return ["config":TGToolFilterConfigModel.classForCoder()
+        ]
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>62C30086-43F6-4938-B991-23C5BB1DFDE1</string>
+	<string>5B8B4A85-4C2A-44D1-BFB8-74F82012A4CB</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>no data view</string>
+	<string>yymodel custom</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

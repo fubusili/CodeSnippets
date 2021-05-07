@@ -3,31 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_no data view</string>
+	<string>x_block_param_oc</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (TGToolNoDataView *)noDataView {
-    if (!_noDataView) {
-        _noDataView = [TGToolNoDataView noDataWithType:TGToolNoDataViewTypeCustom];
-        _noDataView.isContentShouldBeTopCenter = YES;
-        _noDataView.imageStr = @"TG_COMMON_NO_DATA_TIPS";
-        _noDataView.tips = @"搜索不到内容哦";
-        _noDataView.itemVerticalSpace = [NSNumber numberWithFloat:32];
-    }
-    return _noDataView;
-}
-</string>
+	<string>(void (^)(id obj))completion</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>62C30086-43F6-4938-B991-23C5BB1DFDE1</string>
+	<string>1E82FCC8-3166-45BC-91A8-A7F0FA77295B</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>no data view</string>
+	<string>block param oc</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
