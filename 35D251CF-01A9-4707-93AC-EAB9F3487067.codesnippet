@@ -9,11 +9,14 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, assign) &lt;#BOOL#&gt; &lt;#yes#&gt;;///&lt; &lt;#注释#&gt;</string>
+	<string>/// &lt;#注释#&gt;
+@property (nonatomic, assign) &lt;#BOOL#&gt; &lt;#yes#&gt;;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>35D251CF-01A9-4707-93AC-EAB9F3487067</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>assign property</string>
 	<key>IDECodeSnippetUserSnippet</key>

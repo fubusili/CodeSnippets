@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_text_did_change</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+private func registerNotification() {
+    NotificationCenter.default.addObserver(self, selector: #selector(textDidChange(_:)), name: UITextField.textDidChangeNotification, object: nil)
+}
+
+@objc func textDidChange(_ noti: Notification) {
+        if let textField = noti.object as? UITextField, textField == self {
+            // 中文拼音输入忽略
+            if let textRange = textField.markedTextRange, let position = textField.position(from: textRange.start, offset: 0), position == nil {
+                if let text = textField.text as? String {
+                    textDidChangeHandle?(text)
+                }
+            }
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>03D033F4-2D34-422A-AC06-DFB341BA89A4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>text field did change</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

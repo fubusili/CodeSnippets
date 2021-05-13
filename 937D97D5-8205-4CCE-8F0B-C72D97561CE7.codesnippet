@@ -3,22 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_copy_property</string>
+	<string>x_block_property</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, copy) &lt;#NSString#&gt; *&lt;#id#&gt;;///&lt; &lt;#注释#&gt;</string>
+	<string>/// 点击回调
+@property (nonatomic, copy) void (^clickHandle)();</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>38E9F3A9-E2DD-412F-8646-A7EEDE9DC002</string>
+	<string>937D97D5-8205-4CCE-8F0B-C72D97561CE7</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>property copy</string>
+	<string>block property </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

@@ -9,7 +9,8 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@property (nonatomic, strong) &lt;#UIButton#&gt; *&lt;#btn#&gt;;///&lt; &lt;#注释#&gt;</string>
+	<string>///&lt; &lt;#注释#&gt;
+@property (nonatomic, strong) &lt;#UIButton#&gt; *&lt;#btn#&gt;;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>5BEF52E8-E9F3-47DC-9FC0-B19E06C77CA7</string>
 	<key>IDECodeSnippetLanguage</key>
