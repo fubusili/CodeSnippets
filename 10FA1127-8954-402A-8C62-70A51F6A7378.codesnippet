@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_string_property</string>
+	<string>x_copy_property</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>///&lt; &lt;#注释#&gt;
+	<string>/// &lt;#注释#&gt;
 @property (nonatomic, copy) NSString *&lt;#id#&gt;;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>10FA1127-8954-402A-8C62-70A51F6A7378</string>
