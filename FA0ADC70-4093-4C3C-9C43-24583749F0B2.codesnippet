@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_alert_pop_up_button</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let alert = TGUIBottomPopUpAlertView(
+            title: "确定要删除此待办吗？",
+            content: "删除后将无法恢复",
+            buttons: [TGUIButtonBar.cancelButton, TGUIButtonBar.submitButton],
+            click: { [weak self] index in
+                guard let `self` = self else  {return}
+                if index == 1 {
+                    self.show(withText: nil)
+                    if self.toDoModel != nil, let id = self.toDoModel?._id as? String {
+                        TGCRMApiRequest.delSalesPlans(id, successHandler: {
+                            self.hideAllTips()
+                            //self.updateToDoStatus?(self.toDoModel!)
+                            self.updateToDoModelHandle?(self.toDoModel)
+                            self.navigationController?.popViewController(animated: true)
+                        }) { (errMsg, error, statusCode, errorInfo) in
+                            self.showError(errMsg, hideAfterDelay: 1.5)
+                        }
+                    }
+                }
+        })
+        alert.show()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FA0ADC70-4093-4C3C-9C43-24583749F0B2</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>pop up alert view</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
