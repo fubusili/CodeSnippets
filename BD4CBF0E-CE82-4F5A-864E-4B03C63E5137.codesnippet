@@ -19,7 +19,8 @@
         btn.contentHorizontalAlignment = .left
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         btn.setImage(UIImage(named: "home_call_blue"), for: .normal)
-        btn.setTitle("020-38383838 更多（666）", for: .normal)
+        btn.setTitle("&lt;#title#&gt;", for: .normal)
+        btn.setImage(UIImage(color: UIColor.tg_mainThemeColor(withAlpha: 0.8)), for: .highlighted)
         return btn
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>
