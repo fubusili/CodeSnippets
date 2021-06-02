@@ -16,6 +16,7 @@
         label.textColor = UIColor.tg_defaultLabel(withAlpha: 1)
         label.textAlignment = .left
         label.numberOfLines = 0
+        label.preferredMaxLayoutWidth = UIView.screnWidth() - 32
         return label
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>

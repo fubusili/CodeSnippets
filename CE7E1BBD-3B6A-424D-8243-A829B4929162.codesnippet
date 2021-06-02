@@ -3,26 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_btn_click_swfit</string>
+	<string>x_bg_imageview</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    @objc private func btnClick() {
-        btnClickHandle?()
-    }</string>
+	<string>lazy var bg: UIImageView = {
+        let icon = UIImageView()
+        icon.layer.cornerRadius = 5
+        icon.layer.masksToBounds = true
+        if let image = UIImage(named: "tgf_enterprisedetail_Shareholder_bg") {
+            icon.image = image.stretchableImage(withLeftCapWidth: Int(image.size.width)/2, topCapHeight: Int(image.size.height)/2)
+        }
+        return icon
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B6DD7497-2704-4E42-B5BD-FEFCD1D2D34D</string>
+	<string>CE7E1BBD-3B6A-424D-8243-A829B4929162</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>btn click action </string>
+	<string>background image</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

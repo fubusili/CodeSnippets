@@ -3,23 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_btn_click_swfit</string>
+	<string>x_detail_label</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    @objc private func btnClick() {
-        btnClickHandle?()
-    }</string>
+	<string>lazy var detailLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 13)
+        label.text = ""
+        label.textColor = UIColor.tg_defaultLabel(withAlpha: 0.6)
+        label.textAlignment = .left
+        label.numberOfLines = 0
+        return label
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B6DD7497-2704-4E42-B5BD-FEFCD1D2D34D</string>
+	<string>DAED55A0-0AC6-4411-8D91-25534E1D8E2C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>btn click action </string>
+	<string>detail label </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

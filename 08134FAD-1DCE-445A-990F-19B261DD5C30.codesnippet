@@ -3,23 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_btn_click_swfit</string>
+	<string>x_btn_swift</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    @objc private func btnClick() {
-        btnClickHandle?()
-    }</string>
+	<string>lazy var btn: TGButton = {
+        let btn = TGButton(type: .custom)
+        btn.addTarget(self, action: #selector(btnClick), for: UIControl.Event.touchUpInside)
+        btn.setTitleColor(UIColor.tg_defaultLabel(withAlpha: 0.6), for: .normal)
+        btn.contentHorizontalAlignment = .right
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        return btn
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B6DD7497-2704-4E42-B5BD-FEFCD1D2D34D</string>
+	<string>08134FAD-1DCE-445A-990F-19B261DD5C30</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>btn click action </string>
+	<string>button swift</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
