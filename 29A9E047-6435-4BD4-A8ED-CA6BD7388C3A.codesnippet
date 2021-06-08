@@ -3,26 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_for_i</string>
+	<string>x_tableview_property</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>for i in 1 ..&lt; count {
-            
-        }</string>
+	<string>    private lazy var tableView: UITableView = {
+        let tableView = setupTableView(.zero, self, self, .plain)
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.showsVerticalScrollIndicator = false
+        registerCell(withTableView: tableView, TGFStrengthPopViewCell.self)
+        tableView.estimatedRowHeight = 55
+        tableView.backgroundColor = .white
+        return tableView
+    }()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>63500413-2D8F-4D4F-A47D-F3D462EA44FE</string>
+	<string>29A9E047-6435-4BD4-A8ED-CA6BD7388C3A</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>for i &lt;</string>
+	<string>table view property </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
