@@ -3,24 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_import_masonry</string>
+	<string>x_for_i</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>import Masonry</string>
+	<string>for i in 1 ..&lt; count {
+            
+        }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>DDF91C9F-54E7-4FFE-B6ED-C1B896A67CD0</string>
+	<string>63500413-2D8F-4D4F-A47D-F3D462EA44FE</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>import masonry</string>
+	<string>for i &lt;</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
