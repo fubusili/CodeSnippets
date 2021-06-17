@@ -3,25 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_arrow_icon</string>
+	<string>x_enterprise_tgf</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var arrow: TGUIAvatarView = {
-        let icon = TGUIAvatarView()
-        icon.image = UIImage(named: "tgf_cell_arrow_right")
-        return icon
-    }()</string>
+	<string>            TGFEnterpriseController *enterpriseInfoVC = [TGFEnterpriseController new];
+			enterpriseInfoVC.source = TGOperationRecommendControllerSourceTypeOther;
+			enterpriseInfoVC._id = enterpriseId;
+			enterpriseInfoVC.hidesBottomBarWhenPushed = YES;
+			[weak_self.navigationController pushViewController:enterpriseInfoVC animated:YES];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>A6DBF9F1-B166-4B27-8998-6E8324A03BB6</string>
+	<string>44313436-9972-448C-9578-28F97B144904</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>cell arrow icon</string>
+	<string>push entperise detail TGF</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

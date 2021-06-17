@@ -3,29 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_tableview_property</string>
+	<string>x_enterprise_tgf</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private lazy var tableView: UITableView = {
-        let tableView = setupTableView(.zero, self, self, .plain)
-        tableView.showsHorizontalScrollIndicator = false
-        tableView.showsVerticalScrollIndicator = false
-        registerCell(withTableView: tableView, TGFStrengthPopViewCell.self)
-        tableView.estimatedRowHeight = 55
-        tableView.backgroundColor = .white
-        return tableView
-    }()</string>
+	<string>let enterpriseVC = TGFEnterpriseController()
+                        enterpriseVC.source = .other
+                        enterpriseVC._id = id;
+                        self.navigationVc?.pushViewController(enterpriseVC, animated: true)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>29A9E047-6435-4BD4-A8ED-CA6BD7388C3A</string>
+	<string>1D0002A4-B70B-4537-895A-28620662DE95</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>table view property </string>
+	<string>push enterprise detail tgf</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

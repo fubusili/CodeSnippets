@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>&lt;#array#&gt;.enumerated().forEach { (index,&lt;#object#&gt;) in
+	<string>&lt;#array#&gt;.enumerated().forEach { (index, &lt;#object#&gt;) in
                 
             }</string>
 	<key>IDECodeSnippetIdentifier</key>
