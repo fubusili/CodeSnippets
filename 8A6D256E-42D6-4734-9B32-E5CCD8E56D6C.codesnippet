@@ -3,26 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_mas_make_swift</string>
+	<string>x_sin</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>&lt;#object#&gt;.mas_makeConstraints({ make in
-    make?.top.equalTo()(&lt;#contentView#&gt;)?.offset()(8)
-    make?.left.equalTo()(&lt;#contentView#&gt;)
-    make?.right.equalTo()(&lt;#contentView#&gt;)?.offset()(-16)
-    make?.height.mas_equalTo()(20)
-        })</string>
+	<string>@objc public static let shared: TGFPermissionStatusManager =  TGFPermissionStatusManager()</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>0BCA7583-0E33-477A-B1A0-E441D234BCF7</string>
+	<string>8A6D256E-42D6-4734-9B32-E5CCD8E56D6C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>masonry swift</string>
+	<string>singlelon  单例</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
