@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>var size = calcTextSizeV2(CGSize(width: 191, height: CGFloat(MAXFLOAT)), chat.text, 0, titleLabel.font)</string>
+	<string>let size = calcTextSizeV2(CGSize(width: 191, height: CGFloat(MAXFLOAT)), chat.text, 0, titleLabel.font)</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>DB58B2CB-2CD1-4911-A5AE-D35DA74B8342</string>
 	<key>IDECodeSnippetLanguage</key>

@@ -3,21 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_block_handler</string>
+	<string>x_custom_yy</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>public var &lt;#block#&gt;Handler: (()-&gt;Void)?</string>
+	<string>+ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"list": @[@"contracts",@"leads",@"customers",@"opportunities"]};
+}
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"list" : [TGTabListRecentItemModel class],
+             };
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>638DA3AE-A184-4FE7-B183-942EB0856F17</string>
+	<string>3CCACC5D-060C-408E-86C6-8F43A1B4B53A</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>handle block</string>
+	<string>custom property yymodel</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

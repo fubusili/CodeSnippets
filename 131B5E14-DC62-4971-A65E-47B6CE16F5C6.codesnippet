@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_block_handler</string>
+	<string>x_component_array</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>public var &lt;#block#&gt;Handler: (()-&gt;Void)?</string>
+	<string>&lt;#NSArray#&gt;.componentsJoined(by: "、")</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>638DA3AE-A184-4FE7-B183-942EB0856F17</string>
+	<string>131B5E14-DC62-4971-A65E-47B6CE16F5C6</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>handle block</string>
+	<string>component array</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
