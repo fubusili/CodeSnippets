@@ -3,25 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_line_var</string>
+	<string>x_timer</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>private lazy var line: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.tg_lineGray()
-        return view
-    }()</string>
+	<string>locationTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] (time) in
+            guard let `self` = self else {return}
+        })
+        RunLoop.main.add(locationTimer!, forMode: .common)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>944C7EC7-2FE0-4FF0-AE1F-E82D0F19FA42</string>
+	<string>DCB894EC-C404-4DA2-BA50-C41D3C653F5F</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>line var </string>
+	<string>timer add to runloop</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
