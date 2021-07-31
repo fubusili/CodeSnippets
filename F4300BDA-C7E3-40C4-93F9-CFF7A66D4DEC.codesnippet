@@ -3,24 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_disgard_warning_result_ignore</string>
+	<string>x_end_refresh</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@discardableResult</string>
+	<string>    private func endRefresh() {
+        if tableView.mj_header != nil {
+            tableView.mj_header.isHidden = true
+        }
+        
+        if tableView.mj_footer != nil {
+            tableView.mj_footer.isHidden = true
+        }
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>99A6F59A-1FF3-4869-83D8-08F0C73A6591</string>
+	<string>F4300BDA-C7E3-40C4-93F9-CFF7A66D4DEC</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>discard result 忽略返回提醒warning</string>
+	<string>end refresh </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

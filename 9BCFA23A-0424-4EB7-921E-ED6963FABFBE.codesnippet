@@ -3,21 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_disgard_warning_result_ignore</string>
+	<string>x_list_model_swift</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@discardableResult</string>
+	<string>@objcMembers
+class &lt;#class#&gt;: NSObject, YYModel {
+    var list: [&lt;#class#&gt;]?
+    var total: NSNumber?
+    
+    static func modelContainerPropertyGenericClass() -&gt; [String : Any]? {
+        return ["list":&lt;#class#&gt;.classForCoder()
+        ]
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>99A6F59A-1FF3-4869-83D8-08F0C73A6591</string>
+	<string>9BCFA23A-0424-4EB7-921E-ED6963FABFBE</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>discard result 忽略返回提醒warning</string>
+	<string>list model swift</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

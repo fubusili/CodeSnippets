@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_setup_refresh_mj</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    private func setupRefresh() {
+        tableView.mj_header = TGRefreshHeader { [weak self] in
+            guard let `self` = self else {return}
+            if let _ = self.request {
+                tableView.mj_header.endRefreshing()
+            }
+            else {
+                requstList(false)
+            }
+        }
+        
+        tableView.mj_footer = MJRefreshBackNormalFooter { [weak self] in
+            guard let `self` = self else {return}
+            requstList(false, isLoadMore: true)
+        }
+        tableView.mj_footer.isHidden = true
+        
+        if tableView.mj_footer != nil {
+            tableView.mj_footer.isHidden = true
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B22FCBCF-FF1B-4462-81A1-4003DAC8CF9A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>setup mj header footer refresh</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
