@@ -3,29 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_end_refresh</string>
+	<string>x_array_separator</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private func endRefresh() {
-        if tableView.mj_header != nil {
-            tableView.mj_header.isHidden = true
-        }
-        
-        if tableView.mj_footer != nil {
-            tableView.mj_footer.isHidden = true
-        }
-    }</string>
+	<string>posisions.joined(separator:"、")</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F4300BDA-C7E3-40C4-93F9-CFF7A66D4DEC</string>
+	<string>CC76B375-A7F0-4001-A2A8-FC6FB7A2776F</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>end refresh </string>
+	<string>array  separated by string  数组分割成字符串</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

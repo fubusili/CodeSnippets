@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_stack_view_oc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UIStackView *)stackView {
+    if (!_stackView) {
+        _stackView = [UIStackView new];
+        [_stackView addArrangedSubview:self.topStackView];
+        [_stackView addArrangedSubview:self.connectionInsightView];
+        _stackView.spacing = 10;
+        _stackView.axis = UILayoutConstraintAxisVertical;
+        _stackView.alignment = UIStackViewAlignmentCenter;
+        _stackView.distribution = UIStackViewDistributionFillProportionally;
+    }
+    return _stackView;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B825B138-8371-4AF4-AE2D-9247C108691E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>stack view oc</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

@@ -29,9 +29,9 @@
                     self.list.removeAll()
                     self.list.append(contentsOf: list)
                 }
-                DispatchQueue.main.after(0) {
-                    self.tableView.reloadData()
-                }
+            }
+            DispatchQueue.main.after(0) {
+                self.tableView.reloadData()
             }
         }
     }

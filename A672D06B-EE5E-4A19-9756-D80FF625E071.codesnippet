@@ -3,32 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_end_refresh</string>
+	<string>x_getter_property</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private func endRefresh() {
-        if tableView.mj_header != nil {
-            tableView.mj_header.isHidden = true
-        }
-        
-        if tableView.mj_footer != nil {
-            tableView.mj_footer.isHidden = true
-        }
-    }</string>
+	<string>- (&lt;#UIView#&gt; *)&lt;#topView#&gt; {
+    if (!_&lt;#topView#&gt;) {
+        _&lt;#topView#&gt; = [UIView new];
+    }
+    return _&lt;#topView#&gt;;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>F4300BDA-C7E3-40C4-93F9-CFF7A66D4DEC</string>
+	<string>A672D06B-EE5E-4A19-9756-D80FF625E071</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>end refresh </string>
+	<string>getter property </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>
