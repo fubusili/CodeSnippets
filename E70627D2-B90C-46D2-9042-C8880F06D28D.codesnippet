@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_somo_骨架屏</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/// 骨架屏
+extension TGClueHomeNearbyEnterpriseCell: SomoSkeletonLayoutProtocol {
+    func somoSkeletonLayout() -&gt; [SomoView]! {
+        let space: CGFloat = 16
+        let left: CGFloat = 76
+        let btnWidth: CGFloat = 50
+        let textWidth: CGFloat = UIView.screnWidth() - left - space - 8 - btnWidth
+        
+        let s0: SomoView = SomoView(frame: CGRect(x: space, y: space, width: 48, height: 48), somoColor: UIColor(hexString: "#F2F4F9"), animationStyle: .gradientHorizontal)
+        s0.layer.cornerRadius = 8
+        s0.layer.masksToBounds = true
+        
+        let btn: SomoView  = SomoView(frame: CGRect(x: 0, y: 14, width: btnWidth, height: 24), somoColor: UIColor(hexString: "#F2F4F9"), animationStyle: .gradientHorizontal)
+        btn.right = UIView.screnWidth() - 16
+        btn.layer.cornerRadius = 12
+        btn.layer.masksToBounds = true
+        
+        let s1: SomoView  = SomoView(frame: CGRect(x: s0.right + 12, y: space, width: textWidth, height: 24), somoColor: UIColor(hexString: "#F2F4F9"), animationStyle: .gradientHorizontal)
+        
+        let s2: SomoView  = SomoView(frame: CGRect(x: s1.left, y: s1.bottom + 6, width: s1.width, height: 20), somoColor: UIColor(hexString: "#F2F4F9"), animationStyle: .gradientHorizontal)
+        
+        let s3: SomoView  = SomoView(frame: CGRect(x: s1.left, y: s2.bottom + 8, width: s1.width, height: 17), somoColor: UIColor(hexString: "#F2F4F9"), animationStyle: .gradientHorizontal)
+        
+        let s4: SomoView  = SomoView(frame: CGRect(x: s1.left, y: s3.bottom + 4, width: 97, height: 17), somoColor: UIColor(hexString: "#F2F4F9"), animationStyle: .gradientHorizontal)
+        
+        return [s0, s1, s2, s3, s4, btn]
+    }
+    
+    func somoSkeletonBackgroundColor() -&gt; UIColor! {
+        return .white
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E70627D2-B90C-46D2-9042-C8880F06D28D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>somo 骨架屏</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
