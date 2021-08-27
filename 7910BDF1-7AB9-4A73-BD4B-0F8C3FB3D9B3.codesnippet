@@ -3,22 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_bool_property</string>
+	<string>x_snp_mas</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// &lt;#注释#&gt;
-@property (nonatomic, assign) BOOL &lt;#yes#&gt;;</string>
+	<string>        &lt;#btn#&gt;.snp.makeConstraints { (make) in
+            &lt;#make#&gt;
+        }
+            </string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>85EE77DE-E743-48BA-820F-C1035D1FB5AB</string>
+	<string>7910BDF1-7AB9-4A73-BD4B-0F8C3FB3D9B3</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>bool property</string>
+	<string>snap constraints </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

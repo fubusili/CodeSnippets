@@ -3,22 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_bool_property</string>
+	<string>x_after_model_custom</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// &lt;#注释#&gt;
-@property (nonatomic, assign) BOOL &lt;#yes#&gt;;</string>
+	<string>// 当 JSON 转为 Model 完成后，该方法会被调用。
+// 您可以在这里对数据进行校验，如果校验不通过，可以返回 NO，则该 Model 会被忽略。
+// 您也可以在这里做一些自动转换不能完成的工作。
+- (BOOL)modelCustomTransformFromDictionary:(NSDictionary *)dic {
+    
+    return YES;
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>85EE77DE-E743-48BA-820F-C1035D1FB5AB</string>
+	<string>C267FCD9-FB5A-4503-A3FB-AF0682A6152B</string>
 	<key>IDECodeSnippetLanguage</key>
-	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>bool property</string>
+	<string> yy model custom transform </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

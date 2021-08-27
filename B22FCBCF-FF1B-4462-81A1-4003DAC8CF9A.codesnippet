@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_setup_refresh_mj</string>
+	<string>x_refresh_mj</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -13,21 +13,30 @@
         tableView.mj_header = TGRefreshHeader { [weak self] in
             guard let `self` = self else {return}
             if let _ = self.request {
-                tableView.mj_header.endRefreshing()
+                self.tableView.mj_header.endRefreshing()
             }
             else {
-                requstList(false)
+                self.requstList(false)
             }
         }
         
         tableView.mj_footer = MJRefreshBackNormalFooter { [weak self] in
             guard let `self` = self else {return}
-            requstList(false, isLoadMore: true)
+            self.requstList(false, isLoadMore: true)
         }
         tableView.mj_footer.isHidden = true
         
         if tableView.mj_footer != nil {
             tableView.mj_footer.isHidden = true
+        }
+    }
+    
+    private func updateRefresh() {
+        if tableView.mj_header != nil {
+            tableView.mj_header.endRefreshing()
+        }
+        if tableView.mj_footer != nil {
+            tableView.mj_footer.endRefreshing()
         }
     }</string>
 	<key>IDECodeSnippetIdentifier</key>

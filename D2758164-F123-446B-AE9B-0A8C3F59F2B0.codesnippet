@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_cell_scrolltotop</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)reloadTableViewAtIndexPath:(NSIndexPath *)indexPath {
+    // cell相应移动到顶部，体验会更好
+    TGCRMDynamicDetailCell *currentCell = [self.tableView cellForRowAtIndexPath:indexPath];
+    CGRect cellRectToWin = [currentCell convertRect:currentCell.contentView.frame toView:nil];
+    CGRect tableViewRectToWin = [self.view convertRect:self.tableView.frame toView:nil];
+    CGFloat headerHeight = self.plansModel.sales_plans.count ? 40/*header height*/ : 0;
+    CGFloat spacing =  indexPath.row == 0 ? headerHeight : 0;
+    CGFloat needoffsetY = CGRectGetMinY(cellRectToWin) - CGRectGetMinY(tableViewRectToWin) - spacing;
+    if (needoffsetY &lt; 0) {
+        CGPoint currentOffset = self.tableView.contentOffset;
+        CGPoint needOffset = CGPointMake(currentOffset.x, MAX(currentOffset.y + needoffsetY, 0));
+        [UIView animateWithDuration:0.1
+                         animations:^{
+            self.tableView.contentOffset = needOffset;
+        }
+                         completion:^(BOOL finished) {
+            [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+        }];
+    }
+    else {
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D2758164-F123-446B-AE9B-0A8C3F59F2B0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>cell scroll to top</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

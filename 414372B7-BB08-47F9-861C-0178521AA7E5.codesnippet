@@ -3,21 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_text_size_swift</string>
+	<string>x_list_request_count_total</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let size = calcTextSizeV2(CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude), &lt;#title#&gt;, 0, UIFont.systemFont(ofSize: 13))</string>
+	<string>    private var listModel: Any?
+    
+    private var list: NSMutableArray = []
+    
+    private var request: TGNetworkRequestInfo?
+    
+    private var listCount: Int {
+        return 10
+        
+    }
+    
+    private var listTotal: Int {
+        return 0
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>961B3565-4615-4162-9F4B-5D047ECB839D</string>
+	<string>414372B7-BB08-47F9-861C-0178521AA7E5</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>text size </string>
+	<string>list count</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

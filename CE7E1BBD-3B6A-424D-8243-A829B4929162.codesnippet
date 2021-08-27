@@ -10,13 +10,8 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>lazy var bgView: UIImageView = {
-        let icon = UIImageView()
-        icon.layer.cornerRadius = 5
-        icon.layer.masksToBounds = true
-        if let image = UIImage(named: "tgf_enterprisedetail_Shareholder_bg") {
-            icon.image = image.stretchableImage(withLeftCapWidth: Int(image.size.width)/2, topCapHeight: Int(image.size.height)/2)
-        }
-        return icon
+        let view = UIImageView()
+        return view
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>CE7E1BBD-3B6A-424D-8243-A829B4929162</string>
