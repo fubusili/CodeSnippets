@@ -24,7 +24,7 @@
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("👉 collection view cell did click \(indexPath.row)")
+        TGPrint("👉 collection view cell did click \(indexPath.row)")
     }
 }
 
