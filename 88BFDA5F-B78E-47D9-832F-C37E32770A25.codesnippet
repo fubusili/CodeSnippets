@@ -11,7 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>private lazy var noDataView: TGToolNoDataView = {
         let view = TGToolNoDataView.noData(with: .custom)
-        view.frame = view.bounds
+        view.frame = self.view.bounds
         view.tips = tips
         view.imageStr = imageStr
         view.btnTitle = btnTitle

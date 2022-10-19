@@ -3,32 +3,29 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_tableview_property</string>
+	<string>x_refresh_alpha</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private lazy var tableView: UITableView = {
-        let view = setupTableView(.zero, self, self, .plain)
-        view.showsHorizontalScrollIndicator = false
-        view.showsVerticalScrollIndicator = false
-        registerCell(withTableView: view, TGFStrengthPopViewCell.self)
-        view.estimatedRowHeight = 55
-        view.backgroundColor = .white
-        return view
-    }()</string>
+	<string>// 刘海屏下拉刷新隐藏处理
+        if UIView.tg_topInsets &gt; 20 {
+            tableView.mj_header.ignoredScrollViewContentInsetTop = -UIView.tg_topInsets
+            // 自动渐隐
+            tableView.mj_header.isAutomaticallyChangeAlpha = true
+        }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>29A9E047-6435-4BD4-A8ED-CA6BD7388C3A</string>
+	<string>8674386D-C5ED-4433-8F56-8334E02AFD94</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>table view property </string>
+	<string>自动渐隐下拉刷新</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

@@ -9,8 +9,8 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>        &lt;#btn#&gt;.snp.makeConstraints { (make) in
-            &lt;#make#&gt;
+	<string>        &lt;#btn#&gt;.snp.makeConstraints {
+            $0.&lt;#top#&gt;
         }
             </string>
 	<key>IDECodeSnippetIdentifier</key>

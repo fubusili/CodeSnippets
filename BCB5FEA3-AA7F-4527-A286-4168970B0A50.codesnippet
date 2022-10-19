@@ -10,7 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>let tap = UITapGestureRecognizer(target: self, action: #selector(btnClick))
-        self.addGestureRecognizer(tap)</string>
+&lt;#self#&gt;.addGestureRecognizer(tap)</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>BCB5FEA3-AA7F-4527-A286-4168970B0A50</string>
 	<key>IDECodeSnippetLanguage</key>

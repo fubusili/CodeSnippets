@@ -3,29 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_tableview_property</string>
+	<string>x_corner_color_img</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private lazy var tableView: UITableView = {
-        let view = setupTableView(.zero, self, self, .plain)
-        view.showsHorizontalScrollIndicator = false
-        view.showsVerticalScrollIndicator = false
-        registerCell(withTableView: view, TGFStrengthPopViewCell.self)
-        view.estimatedRowHeight = 55
-        view.backgroundColor = .white
-        return view
-    }()</string>
+	<string>let img = UIImage.corner(with:  UIImage(color: UIColor.tg_mainTheme(), size: CGSize(width: 8, height: 8)), radius: 4)</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>29A9E047-6435-4BD4-A8ED-CA6BD7388C3A</string>
+	<string>3229D975-2196-40FF-87CB-0BAC773CB7B6</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>table view property </string>
+	<string>corner color img</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

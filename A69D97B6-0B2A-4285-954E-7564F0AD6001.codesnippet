@@ -29,11 +29,11 @@ private lazy var collectionView: UICollectionView = {
 private lazy var collectionViewLayout: TGToolTagCollectionViewLayout = {
     let collectionViewLayout = TGToolTagCollectionViewLayout()
     collectionViewLayout.delegate = self
-    collectionViewLayout.itemHeight = 19
-    collectionViewLayout.tagInnerMargin = 12
+    collectionViewLayout.itemHeight = 20
+    collectionViewLayout.tagInnerMargin = 10
     collectionViewLayout.itemSpacing = 4
     collectionViewLayout.isJustShowSingleRow = true
-    collectionViewLayout.itemFont = UIFont.systemFont(ofSize: 11)
+    collectionViewLayout.itemFont = UIFont.systemFont(ofSize: 12)
     return collectionViewLayout
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>

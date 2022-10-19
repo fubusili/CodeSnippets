@@ -11,11 +11,11 @@
 	<key>IDECodeSnippetContents</key>
 	<string>let alert = UIAlertController(title: "提示", message: "确定清除所有最近搜索？", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
-            alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { (action) in
+            alert.addAction(UIAlertAction(title: "确定", style: .default, handler: { action in
                 TGSearchPageDAO().clearAllHistoryKeys()
                 strongSelf.loadSearchData()
             }))
-            strongSelf.goToNextViewController(alert, .present, true)</string>
+            self.goToNextViewController(alert, .present, true)</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>FE9FCFDE-282F-4137-BB28-94B9D0DEB927</string>
 	<key>IDECodeSnippetLanguage</key>

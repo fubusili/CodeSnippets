@@ -3,29 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_tableview_property</string>
+	<string>x_yy_archive_encode</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private lazy var tableView: UITableView = {
-        let view = setupTableView(.zero, self, self, .plain)
-        view.showsHorizontalScrollIndicator = false
-        view.showsVerticalScrollIndicator = false
-        registerCell(withTableView: view, TGFStrengthPopViewCell.self)
-        view.estimatedRowHeight = 55
-        view.backgroundColor = .white
-        return view
-    }()</string>
+	<string>required convenience public init?(coder aDecoder: NSCoder) {
+        self.init()
+        self.yy_modelInit(with: aDecoder)
+    }
+    
+    public func encode(with aCoder: NSCoder) {
+        self.yy_modelEncode(with: aCoder)
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>29A9E047-6435-4BD4-A8ED-CA6BD7388C3A</string>
+	<string>B545B035-37ED-4FD9-ACD7-CE6F12D9D966</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>table view property </string>
+	<string>archive model</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

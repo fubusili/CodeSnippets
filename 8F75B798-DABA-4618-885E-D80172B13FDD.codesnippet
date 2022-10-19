@@ -3,29 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_tableview_property</string>
+	<string>x_selected_cell_bg</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private lazy var tableView: UITableView = {
-        let view = setupTableView(.zero, self, self, .plain)
-        view.showsHorizontalScrollIndicator = false
-        view.showsVerticalScrollIndicator = false
-        registerCell(withTableView: view, TGFStrengthPopViewCell.self)
-        view.estimatedRowHeight = 55
-        view.backgroundColor = .white
-        return view
-    }()</string>
+	<string>let view = UIView(frame: cell.bounds)
+        view.backgroundColor = TGBossTheme.curTheme.selectedBgColor
+        cell.selectedBackgroundView = view</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>29A9E047-6435-4BD4-A8ED-CA6BD7388C3A</string>
+	<string>8F75B798-DABA-4618-885E-D80172B13FDD</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>table view property </string>
+	<string>selected cell background color</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

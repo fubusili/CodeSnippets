@@ -3,19 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_yy_custome</string>
+	<string>x_yy_custom</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>public static func modelCustomPropertyMapper() -&gt; [String : Any]? {
-        return ["config":"search_config"]
-    }
-    
-    static func modelContainerPropertyGenericClass() -&gt; [String : Any]? {
-        return ["config":TGToolFilterConfigModel.classForCoder()
+	<string>    static func modelContainerPropertyGenericClass() -&gt; [String : Any]? {
+        return ["list":TGConnectionRecommendItem.classForCoder()
         ]
+    }
+    public static func modelCustomPropertyMapper() -&gt; [String : Any]? {
+        return ["list": ["data", "list"]]
     }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>5B8B4A85-4C2A-44D1-BFB8-74F82012A4CB</string>

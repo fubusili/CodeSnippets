@@ -9,8 +9,8 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var bgView: UIImageView = {
-        let view = UIImageView()
+	<string>lazy var bgView: UIView = {
+        let view = UIView()
         return view
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>

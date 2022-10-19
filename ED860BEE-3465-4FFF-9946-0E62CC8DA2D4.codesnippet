@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>enum TGLeadsChatType: String, CaseIterable {
+	<string>enum TG&lt;#class#&gt;Type: String, CaseIterable {
     case text
 }</string>
 	<key>IDECodeSnippetIdentifier</key>

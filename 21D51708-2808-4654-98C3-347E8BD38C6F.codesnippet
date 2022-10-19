@@ -20,19 +20,13 @@
             begin = listCount
         }
         self.request(begin, size: end) { (listModel) in
-            self.listModel = listModel as? TGConnectionRecommendListModel
             if let model = listModel as? TGConnectionRecommendListModel {
-                if let list = model.list, list.count &gt; 0 {
-                    if isLoadMore {
-                        self.list.append(contentsOf: list)
-                    }
-                    else {
-                        self.list.removeAll()
-                        self.list.append(contentsOf: list)
-                    }
-                }
-                else if !isLoadMore {
+                self.listModel = model
+                if !isLoadMore {
                     self.list.removeAll()
+                }
+                if let list = model.list, list.count &gt; 0 {
+                    self.list.append(contentsOf: list)
                 }
             }
             DispatchQueue.main.after(0) {

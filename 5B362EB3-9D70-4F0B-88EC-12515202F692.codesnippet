@@ -9,10 +9,10 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>- (TGSearcheBarView *)searchBar {
+	<string>- (TGSearchBarView *)searchBar {
     if (!_searchBar) {
         kWeakObj(self);
-        _searchBar = [[TGSearcheBarView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 56) placeHolder:self.searBarPlaceHolder clickBlock:nil isShowCancelBtn:false cancelBlock:nil];
+        _searchBar = [[TGSearchBarView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 56) placeHolder:self.searBarPlaceHolder clickBlock:nil isShowCancelBtn:false cancelBlock:nil];
         _searchBar.searchBarHeight = 32;
         _searchBar.searchBarCornerRadius = _searchBar.searchBarHeight/2;
         _searchBar.isCanNotInputNullStr = YES;///&lt; 无法输入空字符串

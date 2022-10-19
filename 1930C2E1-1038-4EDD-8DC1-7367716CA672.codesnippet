@@ -9,8 +9,8 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private lazy var searchBar: TGSearcheBarView = {
-        let search = TGSearcheBarView(frame: CGRect(x: 0, y: 0, width: view.height, height: searchBarHeight), placeHolder: "", click: {
+	<string>    private lazy var searchBar: TGSearchBarView = {
+        let search = TGSearchBarView(frame: CGRect(x: 0, y: 0, width: view.height, height: searchBarHeight), placeHolder: "", click: {
             
         }, isShowCancelBtn: false, cancel: nil)
         search.searchBarHeight = 36
@@ -29,6 +29,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>@objc public static let shared: TGFPermissionStatusManager =  TGFPermissionStatusManager()</string>
+	<string>@objc public static let shared =  &lt;#Class#&gt;()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>8A6D256E-42D6-4734-9B32-E5CCD8E56D6C</string>
 	<key>IDECodeSnippetLanguage</key>

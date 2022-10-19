@@ -3,41 +3,35 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_setup_refresh_mj</string>
+	<string>x_refresh_mj</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private func setupRefresh() {
-        tableView.mj_header = TGRefreshHeader { [weak self] in
-            guard let `self` = self else {return}
-            if let _ = self.request {
-                tableView.mj_header.endRefreshing()
-            }
-            else {
-                requstList(false)
-            }
-        }
-        
+	<string>private func setupRefresh() {
         tableView.mj_footer = MJRefreshBackNormalFooter { [weak self] in
             guard let `self` = self else {return}
-            requstList(false, isLoadMore: true)
+            self.requestDoneList(false, isLoadMore: true, completion: nil)
         }
-        tableView.mj_footer.isHidden = true
-        
+        tableView.mj_header = TGRefreshHeader { [weak self] in
+            guard let `self` = self else {return}
+            self.requestDoneList(false, isLoadMore: false) { (model) in
+                strongSelf.tableView.mj_header.endRefreshing()
+            }
+        }
         if tableView.mj_footer != nil {
             tableView.mj_footer.isHidden = true
         }
     }</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>B22FCBCF-FF1B-4462-81A1-4003DAC8CF9A</string>
+	<string>175A69B2-6154-4EC4-AAE5-E93BC00021C2</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Swift</string>
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>setup mj header footer refresh</string>
+	<string>table view refresh data</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>public var &lt;#block#&gt;Handler: (()-&gt;Void)?</string>
+	<string>public var &lt;#block#&gt;Handler: (() -&gt; Void)?</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>638DA3AE-A184-4FE7-B183-942EB0856F17</string>
 	<key>IDECodeSnippetLanguage</key>

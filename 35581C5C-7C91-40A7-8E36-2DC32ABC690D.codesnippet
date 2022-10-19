@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_block_trail</string>
+	<string>x_block_tail</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>{ [weak self] (indexPath) in
+	<string>{ [weak self] &lt;#indexPath#&gt; in
             guard let `self` = self else {return}
         }</string>
 	<key>IDECodeSnippetIdentifier</key>
@@ -19,7 +19,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>block value trail</string>
+	<string>block value tail</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

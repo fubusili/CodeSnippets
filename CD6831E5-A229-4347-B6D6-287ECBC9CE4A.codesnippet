@@ -19,6 +19,8 @@
         if tags.count &gt; indexPath.item {
             let model: TGToolTagModel = tags[indexPath.item]
             cell.setupTagInfo(model)
+            cell.btn.layer.cornerRadius = collectionViewLayout.itemCornerRadius
+            cell.btn.titleLabel?.font = collectionViewLayout.itemFont
         }
         return cell
     }

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_page_menu_config</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>extension TGHomeController: TGPageMenuControllerDelegate {
+    
+    private func setupConfig() {
+        
+        self.delegate = self
+        
+        // 配置信息
+        config.titles = ["附近企业"]
+        config.controllers = [nearbyTab]
+        config.hoverHeight = UIView.navigationBarHeight()
+        config.headerHeight = TGClueHomeHeaderView.headerViewHeight()
+        config.isShowPageTitleBottomLine = true
+        config.pageContentWidth = UIView.screnWidth()
+        config.pageContentBGColor = UIColor.tg_globalBackgroundGray()
+        config.pageContentHeight = UIView.screnHeight() - (self.tabBarController?.tabBar.height ?? UIView.tabbarHeight())
+        config.headerView = headerView
+        
+    }
+    
+    private func setupRefresh() {
+        tableView.mj_header = TGRefreshAnimationWhiteHeader { [weak self] in
+            guard let `self` = self else {return}
+            
+            if self.config.controllers.count == 1 {
+                if let vc: TGClueHomeNearbyEnterpriseController = self.config.controllers[self.config.currentIndex] as? TGClueHomeNearbyEnterpriseController {
+                    vc.headerRefresh()
+                    vc.maybeRequestFilterConfig()
+                }
+                return
+            }
+            
+            // 刷新对应控制器
+            if self.config.currentIndex == 0 {
+                if let vc: TGClueHomeRecommendController = self.config.controllers[self.config.currentIndex] as? TGClueHomeRecommendController {
+                    vc.requestNewData(false) { (info) in
+                        self.tableView.mj_header.endRefreshing()
+                    }
+                }
+            }
+            else if self.config.currentIndex == 1 {
+                if let vc: TGClueHomeDynamicController = self.config.controllers[self.config.currentIndex] as? TGClueHomeDynamicController {
+                    vc.requestNewData(false, isLoadMore: false) { (info) in
+                        self.tableView.mj_header.endRefreshing()
+                    }
+                }
+            }
+            else if self.config.currentIndex == 2 {
+                if let vc: TGClueHomeNearbyEnterpriseController = self.config.controllers[self.config.currentIndex] as? TGClueHomeNearbyEnterpriseController {
+                    vc.headerRefresh()
+                }
+            }
+            else {
+                DispatchQueue.main.after(1) {
+                    self.tableView.mj_header.endRefreshing()
+                }
+            }
+            
+        }
+        if UIView.tg_topInsets &gt; 20 {
+            tableView.mj_header.ignoredScrollViewContentInsetTop = -UIView.tg_topInsets
+            // 自动渐隐
+            tableView.mj_header.isAutomaticallyChangeAlpha = true
+        }
+        sendHeaderViewToBack()
+    }
+
+    
+    public func tableViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY: CGFloat = scrollView.contentOffset.y
+        var scrollUp = true
+        if currentOffsetY - offsetY &lt;= 0.0 {
+            scrollUp = false
+        }
+        currentOffsetY = offsetY
+        
+        let toggleY: CGFloat = kMargin(160) - (UIView.tg_topInsets &gt; 20 ? 0 : kMargin_10)
+        
+        if offsetY &lt;= 0.0 || (scrollUp &amp;&amp; offsetY &lt;= toggleY) {
+            currentProgress = 0.0
+            customNavigationBar.alpha = currentProgress
+            //设置状态栏
+            statusBarStyle = .lightContent
+            setNeedsStatusBarAppearanceUpdate()
+        }
+        else if offsetY &gt; toggleY {
+            //设置状态栏
+            statusBarStyle = .default
+            setNeedsStatusBarAppearanceUpdate()
+            currentProgress = (offsetY - toggleY) / kMargin(40)
+            customNavigationBar.alpha = currentProgress
+        }
+        customNavigationBar.isUserInteractionEnabled = customNavigationBar.alpha &gt;= 0.5
+        headerView.searchBar.isUserInteractionEnabled = customNavigationBar.alpha &lt;= 0.3
+        
+        // sub controller table view heder 是否到达顶部（header变化使用）
+        if customNavigationBar.alpha &gt;= 1 {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "kTGClueHomeTableViewScrollToTop"), object: ["isTop":true])
+        }
+        else if customNavigationBar.alpha &lt;= 0.5 {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "kTGClueHomeTableViewScrollToTop"), object: ["isTop":false])
+        }
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B1F683AA-BFAB-4F48-9325-76371D201081</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>page menu set up config</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

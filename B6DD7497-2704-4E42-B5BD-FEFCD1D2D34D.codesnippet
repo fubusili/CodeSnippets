@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_btn_click_swfit</string>
+	<string>x_btn_click_swift</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>    @objc private func btnClick() {
-        btnClickHandle?()
+        btnClickHandler?()
     }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>B6DD7497-2704-4E42-B5BD-FEFCD1D2D34D</string>
