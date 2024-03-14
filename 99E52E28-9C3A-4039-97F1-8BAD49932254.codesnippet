@@ -9,18 +9,16 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>class func requestRecommendList(successHandle:requestCompletionHandle?, failureHandle:requesetFailureHandle?) -&gt; TGNetworkRequestInfo? {
-    let urlStr = &lt;#url#&gt;
-        
-        let request = TGNetworkManager.shareInstnace()?.request(with: .get, urlString: urlStr, parameters: nil, headerParams: nil, successBlock: { (obj) in
-            let info: &lt;#model#&gt; = &lt;#model#&gt;.yy_model(withJSON: obj)!
-            successHandle?(info)
-        }, failureBlock: { (error, statusCode, errInfo) in
-            let errMsg: String = TGNetworkErrorBaseHandler.getFinalErrMessage(withStatusCode: statusCode, errCode: errInfo != nil ? Int32(errInfo!.err) : statusCode)
-            failureHandle?(errMsg, error, Int(statusCode), errInfo)
-        })
-        return request
-    }</string>
+	<string>class func downloadExportRecordData(_ id: String, completion: TGSimpleRequestCallback? = nil) {
+    let urlStr = "/mobile-api/download-progress/download-url"
+    _ = TGNetworkManager.shareInstnace().request(with: .get, urlString: urlStr, parameters: ["_id": id], headerParams: nil, successBlock: { (obj) in
+        let info = TGExportRecordLocalModel.yy_model(withJSON: obj as Any)
+        completion?(info, nil)
+    }, failureBlock: { _, statusCode, errInfo in
+        let errMsg: String = TGNetworkErrorBaseHandler.getFinalErrMessage(withStatusCode: errInfo != nil ? Int32(errInfo!.err) : statusCode, networkErrorInfo: errInfo)
+        completion?(nil, errMsg)
+    })
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>99E52E28-9C3A-4039-97F1-8BAD49932254</string>
 	<key>IDECodeSnippetLanguage</key>

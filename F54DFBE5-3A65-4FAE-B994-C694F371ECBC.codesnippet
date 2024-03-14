@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_icon_swift</string>
+	<string>x_icon</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -11,8 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>lazy var icon: TGUIAvatarView = {
         let icon = TGUIAvatarView()
-        icon.layer.cornerRadius = 5
-        icon.layer.masksToBounds = true
+        icon.tg_layerCornerRadius(iconWidth/2)
         return icon
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>
@@ -22,7 +21,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>icon for cell</string>
+	<string>文字和图片头像</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

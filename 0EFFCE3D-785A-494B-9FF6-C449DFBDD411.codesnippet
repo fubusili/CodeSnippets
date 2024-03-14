@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_scale_animate</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/// 改变cell选中状态
+    func updateBgviewTransform(_ isTransform: Bool = false) {
+        UIView.animate(withDuration: 0.1) {
+            self.bgView.transform = isTransform ? CGAffineTransform(scaleX: 0.96, y: 0.96) : CGAffineTransform.identity
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0EFFCE3D-785A-494B-9FF6-C449DFBDD411</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>view scale animation</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

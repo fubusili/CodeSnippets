@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_start_end_time</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let secondsOfOneDay = TimeInterval(24 * 60 * 60 * 1000)
+        let todayBegin = TimeInterval(Date.tg_todayStart.timeIntervalSince1970 * 1000)
+        // 30天内
+        let endDate = todayBegin -  30 * secondsOfOneDay
+        params["start_time"] = NSDate.timeString(withTimeInterval: todayBegin, formatStr: "yyyy-MM-dd")
+        params["end_time"] = NSDate.timeString(withTimeInterval: endDate, formatStr: "yyyy-MM-dd")</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>08AFC67B-BB34-47BF-8C78-B4D46C888728</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>开始时间 结束时间 多少天内</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

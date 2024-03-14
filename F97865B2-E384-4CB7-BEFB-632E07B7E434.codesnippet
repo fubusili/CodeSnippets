@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_no_data_empty</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    lazy private var emptyView: UIView = {
+        let baseView = UIView()
+        baseView.backgroundColor = .white
+        let aView = TGStateViewManager.convertStateView(stateViewType: KaidanguoCoupons.searchStoreEmpty)
+        aView.backgroundColor = .white
+        baseView.addSubview(aView)
+        aView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(100)
+            make.left.right.centerX.equalToSuperview()
+        }
+        return baseView
+    }()
+    
+    lazy private var netErrView: UIView = {
+        let baseView = UIView()
+        baseView.backgroundColor = .white
+        
+        let aView = TGStateViewManager.convertStateView(stateViewType: KaidanguoCoupons.searchStoreNoNet)
+        aView.clickStateBtnAction = {[weak self] in
+            guard let self = self else { return }
+            self.requestList(true)
+        }
+        aView.backgroundColor = .white
+        baseView.addSubview(aView)
+        aView.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(100)
+            make.left.right.centerX.equalToSuperview()
+        }
+        return baseView
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F97865B2-E384-4CB7-BEFB-632E07B7E434</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>no data view empty view</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

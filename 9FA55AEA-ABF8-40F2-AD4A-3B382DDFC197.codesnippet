@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_padding_label</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    lazy var statusLabel: TGPaddingLabel = {
+        let label = TGPaddingLabel()
+        label.font = UIFont.systemFont(ofSize: 11)
+        label.text = ""
+        label.textColor = UIColor.tg_defaultLabel(withAlpha: 0.4)
+        label.textAlignment = .center
+        label.numberOfLines = 1
+        label.textInsets = UIEdgeInsets(top: 3, left: 6, bottom: 3, right: 6)
+        label.tg_layerCornerRadius(3)
+        return label
+    }()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9FA55AEA-ABF8-40F2-AD4A-3B382DDFC197</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>内间距label</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

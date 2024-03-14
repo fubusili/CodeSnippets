@@ -3,24 +3,33 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_request_list</string>
+	<string>x_request_list_swift</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>extension TGConnectionRecommendList {
-    private func requestList(_ isShowLoading: Bool = true, isLoadMore: Bool = false, completion: requestCompletionHandle? = nil) {
-        if isShowLoading {
-            self.showInteractiveHud()
+    private func requestList(_ isShowLoading: Bool = false,
+                             isLoadMore: Bool = false,
+                             completion: requestCompletionHandle? = nil) {
+        if isShowLoading, !isShowSomo {
+            self.view.showInteractiveHud()
         }
         var begin: Int = 0
-        let end: Int = 20
+        var end: Int = 20
         if isLoadMore {
             begin = listCount
+            end += begin
         }
-        self.request(begin, size: end) { (listModel) in
-            if let model = listModel as? TGConnectionRecommendListModel {
+        self.requestDataList(begin, end: end) { listModel, errMsg in
+            self.view.hideHud()
+            self.request = nil
+            self.isShowSomo = false
+            if let msg = errMsg, msg.count &gt; 0  {
+                self.view?.showError(msg, afterDelay: 1.5)
+            }
+            else if let model = listModel as? TGSubscriptionListModel {
                 self.listModel = model
                 if !isLoadMore {
                     self.list.removeAll()
@@ -29,36 +38,25 @@
                     self.list.append(contentsOf: list)
                 }
             }
-            DispatchQueue.main.after(0) {
+            self.updateErrViewStatus(errMsg != nil)
+            DispatchQueue.main.after(1) {
                 self.tableView.reloadData()
+                self.updateRefresh()
             }
         }
     }
-    
-    private func request(_ start: Int, size: Int, completion:requestCompletionHandle?) {
-        self.request?.cancel()
-        self.request = TGNetworkManager.requestConnectionRecommendList(start, size: size, successHandle: {(info) in
-            completion?(info)
-        }, failureHandle: { (errMsg, error, statusCode, errorInfo) in
-            if let msg = errMsg, msg.count &gt; 0 {
-                self.showInteractiveError(msg, afterDelay: 1.5)
-            }
-            DispatchQueue.main.after(1.5) {
-                completion?(nil)
-            }
-        })
-    }
-}
 
-extension TGNetworkManager {
-    class func requestConnectionRecommendList(_ start: Int, size: Int, successHandle:requestCompletionHandle?, failureHandle:requesetFailureHandle?) -&gt; TGNetworkRequestInfo? {
-        let params: [String : Any] = ["start": start, "size": size]
-        return TGNetworkManager.shareInstnace()?.request(with: .get, urlString: "/mobile-api/human/recommendation/search", parameters: params, headerParams: nil, successBlock: { (obj) in
-            let info: TGConnectionRecommendListModel? = TGConnectionRecommendListModel.yy_model(withJSON: obj)
-            successHandle?(info)
-        }, failureBlock: { (error, statusCode, errInfo) in
+    private func requestDataList(_ begin: Int, 
+                         end: Int, 
+                         completion: TGSimpleRequestCallback?) {
+        self.request?.cancel()
+        let params: [String: Any] = ["begin": begin, "end": end]
+        self.request = TGNetworkManager.shareInstnace().request(with: .get, urlString: "/mobile-api/human/recommendation/search", parameters: params, headerParams: nil, successBlock: { (obj) in
+            let model = TGConnectionRecommendListModel.yy_model(withJSON: obj)
+            completion?(model, nil)
+        }, failureBlock: { _, statusCode, errInfo in
             let errMsg: String = TGNetworkErrorBaseHandler.getFinalErrMessage(withStatusCode: errInfo != nil ? Int32(errInfo!.err) : statusCode, networkErrorInfo: errInfo)
-            failureHandle?(errMsg, error, Int(statusCode), errInfo)
+            completion?(nil, errMsg)
         })
     }
 }</string>
@@ -69,7 +67,7 @@ extension TGNetworkManager {
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>request list data </string>
+	<string>request list swift</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_alert_swift</string>
+	<string>x_system_alert</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -15,7 +15,7 @@
                 TGSearchPageDAO().clearAllHistoryKeys()
                 strongSelf.loadSearchData()
             }))
-            self.goToNextViewController(alert, .present, true)</string>
+self.goToNextViewController(alert, type: .present, animated: true)</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>FE9FCFDE-282F-4137-BB28-94B9D0DEB927</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -23,7 +23,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>alert view controller </string>
+	<string>系统弹窗控制器</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

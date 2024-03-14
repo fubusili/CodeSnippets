@@ -11,6 +11,7 @@
 	<key>IDECodeSnippetContents</key>
 	<string>lazy var bgView: UIView = {
         let view = UIView()
+        view.backgroundColor = .white
         return view
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>

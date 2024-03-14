@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_navi_right_btn</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func setupRightBtn() {
+        rigntBtn.removeFromSuperview()
+        let title = TGLocationManager.shared.city
+        if let title = title {
+            rigntBtn.setTitle(title, for: .normal)
+            rigntBtn.setTitleColor(UIColor.tg_defaultLabel(withAlpha: 0.85), for: .normal)
+            rigntBtn.setImage(UIImage(named: "bidding_loacation"), for: .normal)
+        }
+        else {
+            rigntBtn.setTitle("开启定位", for: .normal)
+            rigntBtn.setTitleColor(UIColor.tg_defaultLabel(withAlpha: 0.4), for: .normal)
+            rigntBtn.setImage(UIImage(named: "bidding_loacation_gray"), for: .normal)
+        }
+        topBarView.addSubview(rigntBtn)
+        rigntBtn.snp.makeConstraints {
+            $0.right.equalToSuperview().offset(-16)
+            $0.top.bottom.equalToSuperview()
+            $0.centerY.equalToSuperview()
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>6929906C-0926-4E01-A6C5-4A246B0D02A9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>自定义导航栏右键</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

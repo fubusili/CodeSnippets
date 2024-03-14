@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>NotificationCenter.default.post(name: NSNotification.Name(rawValue: kTGNotification_crmStatusHasedChanged), object: nil)</string>
+	<string>NotificationCenter.default.post(name: .kTGBeginnerActivityEndNoti, object: nil)</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>554BAC0B-CA09-40DD-BCEE-392E8DEB5E8C</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -17,7 +17,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>post notification oc key</string>
+	<string>广播通知</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

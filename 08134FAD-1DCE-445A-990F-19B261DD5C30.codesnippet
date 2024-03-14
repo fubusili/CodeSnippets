@@ -13,6 +13,7 @@
         let btn = TGButton(type: .custom)
         btn.addTarget(self, action: #selector(btnClick), for: UIControl.Event.touchUpInside)
         btn.setTitleColor(UIColor.tg_defaultLabel(withAlpha: 0.6), for: .normal)
+        btn.titleLabel?.lineBreakMode = .byTruncatingTail
         btn.contentHorizontalAlignment = .right
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         return btn

@@ -3,14 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_yy_trasnform_custom</string>
+	<string>x_yy_transform</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    func modelCustomTransform(from dic: [AnyHashable : Any]) -&gt; Bool {
-        userType = UserType(user: user)
+	<string>/// 模型自动转换完成后，手动处理自定义字段    
+public func modelCustomTransform(from dic: [AnyHashable: Any]) -&gt; Bool {
+        &lt;#code#&gt;
         return true
     }
     </string>
@@ -21,7 +22,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>yymodel transform custom</string>
+	<string>YYModel custom transform </string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
