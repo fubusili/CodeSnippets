@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_separator_array_to_string</string>
+	<string>x_join_separator_array_to_string</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>&lt;#array#&gt;.joined(separator:"、")</string>
+	<string>&lt;#array#&gt;.joined(separator: "、")</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>CC76B375-A7F0-4001-A2A8-FC6FB7A2776F</string>
 	<key>IDECodeSnippetLanguage</key>

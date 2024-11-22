@@ -15,7 +15,7 @@ class &lt;#class#&gt;: NSObject, YYModel {
     var total: NSNumber?
     
     static func modelContainerPropertyGenericClass() -&gt; [String : Any]? {
-        return ["list":&lt;#class#&gt;.classForCoder()
+        return ["list": &lt;#class#&gt;.classForCoder()
         ]
     }
 }</string>

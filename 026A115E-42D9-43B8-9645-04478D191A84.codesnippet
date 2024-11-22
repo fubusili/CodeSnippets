@@ -3,17 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_icon_image_swift</string>
+	<string>x_icon_image</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var icon: UIImageView = {
+	<string>lazy var iconView: UIImageView = {
         let icon = UIImageView()
-        icon.backgroundColor = UIColor.init(hexString: "#EBF6FF")
-        icon.layer.cornerRadius = 5
-        icon.layer.masksToBounds = true
+        icon.backgroundColor = UIColor(hexString: "#EBF6FF")
+        icon.tg_layerCornerRadius(5)
         return icon
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>
@@ -23,7 +22,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>icon image swift</string>
+	<string>普通图片</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

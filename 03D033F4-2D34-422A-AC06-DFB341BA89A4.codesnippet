@@ -16,11 +16,10 @@ private func registerNotification() {
 
 @objc func textDidChange(_ noti: Notification) {
         if let textField = noti.object as? UITextField, textField == self {
-            // 中文拼音输入忽略
-            if let textRange = textField.markedTextRange, let position = textField.position(from: textRange.start, offset: 0), position == nil {
-                if let text = textField.text as? String {
-                    textDidChangeHandle?(text)
-                }
+            // 过滤中文字符
+            guard textField.markedTextRange != nil else {return}
+            if let text = textField.text as? String {
+                textDidChangeHandle?(text)
             }
         }
     }</string>

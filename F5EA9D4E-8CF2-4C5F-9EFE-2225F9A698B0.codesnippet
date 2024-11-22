@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_table_delegate</string>
+	<string>x_table_delegate_swift</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -16,27 +16,41 @@
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        if isShowSomo {return 10}
         return listCount
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -&gt; CGFloat {
+        if isShowSomo {return 120}
+        return UITableView.automaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
-        let cell = setupCell(withTableView: tableView, cellClass: UITableViewCell.self)
-        if let model = list[indexPath.row] as? TGCRMCustomerModel {
-            cell.textLabel?.text = model.name
+        let cell = setupCell(withTableView: tableView, cellClass: TGSubscriptionBaseCell.self)
+        if indexPath.row &lt; listCount {
+            cell.updateCell(list[indexPath.row])
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -&gt; UIView? {
-        
-        let header = setupCellHeaderView(withTableView: tableView, headerClass: TGCommonTableViewHeader.self)
-        header.title = "共有 -- 位客户"
-        header.count = listTotal
+        let header = TGStatisticsBarView.header(with: tableView, type: type, count: listTotal)
+        header.headerRightTipLab.isHidden = true
+        header.rightSwitch.isHidden = true
         return header
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -&gt; CGFloat {
         return 32
+    }
+
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if isShowSomo {
+            cell.beginSomo()
+        } 
+        else {
+            UIView.animate(withDuration: 0.2) { cell.endSomo() }
+        }
     }
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
@@ -46,7 +60,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>table view delegate </string>
+	<string>table view delegate  swift</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

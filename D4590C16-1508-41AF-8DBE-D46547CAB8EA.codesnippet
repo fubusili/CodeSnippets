@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_gray_config</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>TGGrayLevelAppConfig.shared.getModel(allowCache: allowCache, key: "mine_enterprise_account_crm") { model in
+    // 客户管理配置
+    let cur = model?.mine_enterprise_account_crm?.application_list
+    let cache = TGGrayLevelAppConfigModel.cacheConfig?.mine_enterprise_account_crm?.application_list
+    if allowCache {
+        let isSame = tg_isAnyValueEqual((cur as? NSArray)?.yy_modelToJSONObject(), another: (cache as? NSArray)?.yy_modelToJSONObject())
+        if isSame, (self.customerFeatureModels?.count ?? 0) &gt; 0 {// 新请求的跟缓存的一样，不再刷新
+            return
+        }
+    }
+    let features = (cur == nil ? cache : cur)
+    TGSaleOperationList.loadImages(with: features) { [weak self] featureModels in
+        guard let self = self else { return }
+        self.customerFeatureModels = featureModels
+        self.updateSrcData()
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D4590C16-1508-41AF-8DBE-D46547CAB8EA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>gray config request</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

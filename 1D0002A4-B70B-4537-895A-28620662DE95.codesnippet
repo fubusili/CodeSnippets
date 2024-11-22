@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let enterpriseVC = TGFEnterpriseController()
+	<string>let enterpriseVC = TGEnterpriseController()
                         enterpriseVC.source = .other
                         enterpriseVC._id = id;
                         self.navigationVc?.pushViewController(enterpriseVC, animated: true)</string>
