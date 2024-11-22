@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_loacation_amap</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>private func refreshLocation(_ completion: TGNoParamBlock? = nil) {
+        if self.locationInfo == nil {
+            let key = self.className
+            TGAMapLocationManager.shared.requestLocationWith(key: key, canUseCache: true, autoRemoveWhenCallback: false) {[weak self] shouldShowToSetting, info, _ in
+                guard let self = self else { return }
+                if let aInfo = info {
+                    self.locationInfo = aInfo
+                    TGAMapLocationManager.shared.removeCallbackForKey(key)
+                }
+                else if shouldShowToSetting, !TGAMapLocationManager.shared.hasShowTipsForKey(key) {
+                    TGAMapLocationManager.shared.saveShowTipsValue(true, forKey: key)
+                    TGLocationAuthManager.showLocationPermissionTips(message: nil, cancelBtn: "取消", confirmBtn: "去设置") {[weak self] in
+                        guard let self = self else { return }
+                        self.locationInfo = TGAMapLocationInfo()
+                        self.locationInfo?.province = "广东省"
+                        self.locationInfo?.city = "广州市"
+                        TGAMapLocationManager.shared.removeCallbackForKey(key)
+                    }
+                }
+                else {
+                    self.locationInfo = TGAMapLocationInfo()
+                    self.locationInfo?.province = "广东省"
+                    self.locationInfo?.city = "广州市"
+                }
+            }
+        }
+        else {
+            
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B884A354-432B-4C60-9896-BAF2EC6E5F7E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>获取高德定位信息</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

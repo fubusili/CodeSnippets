@@ -3,13 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_after_queue_swift</string>
+	<string>x_after_queue</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>DispatchQueue.main.after(&lt;#2#&gt;) {
+	<string>DispatchQueue.main.after(&lt;#2#&gt;) { [weak self] in 
+    guard let self = self else {return}
             
         }</string>
 	<key>IDECodeSnippetIdentifier</key>

@@ -10,7 +10,7 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>{ [weak self] &lt;#indexPath#&gt; in
-            guard let `self` = self else {return}
+            guard let self = self else {return}
         }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>35581C5C-7C91-40A7-8E36-2DC32ABC690D</string>

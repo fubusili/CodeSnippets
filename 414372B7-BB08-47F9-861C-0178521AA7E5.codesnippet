@@ -3,21 +3,34 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_list_count_total</string>
+	<string>x_list_count_somo</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    private var listModel: Any?
+	<string>/// 显示骨架屏幕
+private var isShowSomo: Bool = true {
+    didSet {
+        tableView.isScrollEnabled = !isShowSomo
+    }
+} 
+
+public var dataStatusType: TGFastListDataStatusType = .loading {
+    didSet {
+        tableView.isScrollEnabled = !isShowSomo
+        updateEmptyErrView()
+    }
+}
+
+    private var listModel: Any?
     
     private var list: [Any] = []
     
     private var request: TGNetworkRequestInfo?
     
     private var listCount: Int {
-        return 10
-        
+        return list.count
     }
     
     private var listTotal: Int {
@@ -30,7 +43,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>list count</string>
+	<string>list count somo</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

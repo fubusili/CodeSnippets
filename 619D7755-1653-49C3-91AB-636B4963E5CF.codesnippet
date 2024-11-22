@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_download_file_data</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    /// 根据url下载文件数据
+    public class func downloadExportRecordData(_ url: String, completion: TGSimpleRequestCallback? = nil) {
+        let manager = AFURLSessionManager(sessionConfiguration: URLSessionConfiguration.default)
+        manager.responseSerializer = AFHTTPResponseSerializer()
+        let url = URL(string: url)!
+        let request = URLRequest(url: url)
+        let downloadTask = manager.dataTask(with: request, uploadProgress: nil, downloadProgress: nil) { _, data, error in
+            if let error = error {
+                completion?(nil, error.localizedDescription)
+            } else {
+                completion?(data, nil)
+            }
+        }
+        downloadTask.resume()
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>619D7755-1653-49C3-91AB-636B4963E5CF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>download file data 下载文件数据</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

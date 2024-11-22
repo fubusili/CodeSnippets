@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_pop_queue</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>TGPopupQueueManager.shared.addNewPopup(TGPopupQueueType.other.rawValue) { _, closeHandler in 
+                let vc = TGCollecSalesProductAlertController()
+                vc.titleText = "您是卖什么产品的销售？"
+                vc.contentText = "填写您卖的产品关键词，即刻给您匹配精准客户"
+                vc.dismissHandler = closeHandler
+                UIViewController.currentTopController?.tg_presentViewController(with: vc, style: .center)
+                TGSubscriptionUserDefaultsType.collectSalesProduct.setDBValue(true)
+            }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>EC4ACAAA-7577-486D-B001-F09F0B69ED05</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>加入弹窗队列</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

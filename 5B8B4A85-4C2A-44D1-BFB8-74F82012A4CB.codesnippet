@@ -9,11 +9,10 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    static func modelContainerPropertyGenericClass() -&gt; [String : Any]? {
-        return ["list":TGConnectionRecommendItem.classForCoder()
-        ]
+	<string>    public static func modelContainerPropertyGenericClass() -&gt; [String: Any]? {
+        return ["list": TGConnectionRecommendItem.self]
     }
-    public static func modelCustomPropertyMapper() -&gt; [String : Any]? {
+    public static func modelCustomPropertyMapper() -&gt; [String: Any]? {
         return ["list": ["data", "list"]]
     }</string>
 	<key>IDECodeSnippetIdentifier</key>

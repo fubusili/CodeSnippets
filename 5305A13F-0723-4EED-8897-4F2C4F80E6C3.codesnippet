@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_native_share</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    func operateActionOpenNativeShare(_ fileName: String?) {
+        guard let fileName = fileName else {return}
+        let vc = UIActivityViewController(activityItems: [TGExportRecordFileManager.filePath(fileName)], applicationActivities: nil)
+        UIViewController.currentNavigation?.present(vc, animated: true)
+        
+    } </string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5305A13F-0723-4EED-8897-4F2C4F80E6C3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>native share 手机自带分享</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

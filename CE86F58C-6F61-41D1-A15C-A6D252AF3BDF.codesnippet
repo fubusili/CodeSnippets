@@ -10,13 +10,15 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>+ (NSDictionary *)modelContainerPropertyGenericClass {
-    return @{@"&lt;#leads#&gt;" : [&lt;#TGLeadToCustomerStepOneDetailModel#&gt; class],
+    return @{@"&lt;#leads#&gt;": [&lt;#TGLeadToCustomerStepOneDetailModel#&gt; class],
              };
 }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>CE86F58C-6F61-41D1-A15C-A6D252AF3BDF</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
 	<key>IDECodeSnippetTitle</key>
 	<string>YYModel model array</string>
 	<key>IDECodeSnippetUserSnippet</key>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_vip_alert_vc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let isAdmin = TGPermissionManager.isEnterpriseAdmin()
+        let desc = isAdmin ? adminDesc : "请联系管理员升级超级VIP会员提升额度"
+        let vc = UIViewController.currentTopController
+        TGTryOutManager.showEnterpriseAlert(title: "开通超级VIP升级额度",
+                                            desc: desc,
+                                            confirmBtnTitle: isAdmin ? "去升级企业套餐" : "查看超级VIP权益",
+                                            parentVC: vc) { [weak vc] in
+            guard let vc = vc else { return }
+            TGPush.gotoVipCenter(source: source, vipType: .enterpriseSVip, parentVC: self)
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>925BA9B4-BC46-4766-A178-7C4A536F6C42</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>vip 弹窗</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

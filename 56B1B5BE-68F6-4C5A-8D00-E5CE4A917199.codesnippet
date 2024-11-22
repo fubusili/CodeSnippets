@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_collection_height</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    var collectionViewHeight: CGFloat {
+        let count = tags.count/3 + (tags.count%3 &gt; 0 ? 1: 0)
+        let itemHeight: CGFloat = itemSize.height * CGFloat(count)
+        let margin: CGFloat = CGFloat(8 * max(count - 1, 0))
+        return itemHeight + margin
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>56B1B5BE-68F6-4C5A-8D00-E5CE4A917199</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>collection view height </string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

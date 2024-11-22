@@ -9,33 +9,34 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// 设置下拉上拉刷新     
+	<string>/// 设置下拉上拉刷新
 func setupRefresh() {
-        tableView.mj_footer = MJRefreshBackNormalFooter { [weak self] in
-            guard let `self` = self else {return}
-            self.requestList(false, isLoadMore: true, completion: nil)
-        }
-        let header = TGRefreshHeader_Lottie { [weak self] in
-            guard let `self` = self, !self.isRefreshData else {return}
-            self.requstAllData()
-        }
-        header?.style = .blue
-        tableView.mj_header = header
+    tableView.tg_setMJRefreshHeaderBlock { [weak self] in
+        guard let self = self else {return}
+        self.requestList()
+    }
     
-        if tableView.mj_footer != nil {
-            tableView.mj_footer.isHidden = true
-        }  tableView.mj_footer.isHidden = true
+    tableView.tg_setMJRefreshFooterBlock { [weak self] in
+        guard let self = self else {return}
+        self.requestList(isLoadMore: true)
     }
 
-    /// 设置下拉上拉刷新状态
-    private func updateRefresh() {
-        if tableView.mj_header != nil {
-            tableView.mj_header.endRefreshing()
-        }
-        if tableView.mj_footer != nil {
-            tableView.mj_footer.endRefreshing()
-        }
-    }</string>
+    if tableView.mj_footer != nil {
+        tableView.mj_footer.isHidden = true
+    }
+}
+
+/// 设置下拉上拉刷新状态
+private func updateRefresh() {
+    if tableView.mj_header != nil {
+        tableView.mj_header.endRefreshing()
+    }
+    if tableView.mj_footer != nil {
+        tableView.mj_footer.endRefreshing()
+        let isHidden = self.listTotal &lt;= listCount
+        tableView.mj_footer.isHidden = isHidden
+    }
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>FDFB9124-20F0-4EFB-A5D0-3AF5ACA34F0F</string>
 	<key>IDECodeSnippetLanguage</key>

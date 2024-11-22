@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_component_string_to_array</string>
+	<string>x_NSString_to_array</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>&lt;#string#&gt;.componentsJoined(by: "、")</string>
+	<string>&lt;#NSString#&gt;.componentsJoined(by: "、")</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>131B5E14-DC62-4971-A65E-47B6CE16F5C6</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -17,7 +17,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>字符串变成数组</string>
+	<string>NSString字符串变成数组</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
