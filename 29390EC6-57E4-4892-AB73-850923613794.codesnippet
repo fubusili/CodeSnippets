@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_author_permission_alert</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let authorAlertVC = TGAlertConfirmCancelVC(titleStr: "需要您的相册权限", des: "用于选取照片或视频来制作新的视频", comfirmStr: "去设置")
+        authorAlertVC.confirmBlock = {
+            TGRequestSystemAuthManager.gotoAppSetting()
+        }
+        self.present(authorAlertVC, animated: true, completion: nil)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>29390EC6-57E4-4892-AB73-850923613794</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>author permission alert</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

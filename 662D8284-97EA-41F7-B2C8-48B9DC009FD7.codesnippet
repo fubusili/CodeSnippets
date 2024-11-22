@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_photo_auth_permission</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        let status = PHPhotoLibrary.authorizationStatus()
+        if status == .restricted || status == .denied {
+            showPhotoAuthorPopView()
+        } else if status == .notDetermined {
+            PHPhotoLibrary.requestAuthorization { status in
+                DispatchQueue.main.async {
+                    if status == .denied {
+                        self.showPhotoAuthorPopView()
+                    } else if status == .authorized {
+                        self.albumList = TGFetchAssetManager.fetchAlbumList()
+                    }
+                }
+            }
+        } else {
+            albumList = TGFetchAssetManager.fetchAlbumList()
+        }
+        
+        if #available(iOS 14.0, *), PHPhotoLibrary.authorizationStatus(for: .readWrite) == .limited {
+            PHPhotoLibrary.shared().register(self)
+        }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>662D8284-97EA-41F7-B2C8-48B9DC009FD7</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>photo auth permission</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
