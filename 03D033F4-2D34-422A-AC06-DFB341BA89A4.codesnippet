@@ -15,9 +15,14 @@ private func registerNotification() {
 }
 
 @objc func textDidChange(_ noti: Notification) {
-    // 过滤中文拼音
-    guard let textField = noti.object as? UITextField, textField == self, textField.markedTextRange == nil, let text = textField.text else {return}
-        textDidChangeHandle?(text)
+        if let textField = noti.object as? UITextField, textField == self {
+            // 中文拼音输入忽略
+            if let textRange = textField.markedTextRange, let position = textField.position(from: textRange.start, offset: 0), position == nil {
+                if let text = textField.text as? String {
+                    textDidChangeHandle?(text)
+                }
+            }
+        }
     }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>03D033F4-2D34-422A-AC06-DFB341BA89A4</string>

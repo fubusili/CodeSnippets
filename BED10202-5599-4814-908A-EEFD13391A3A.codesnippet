@@ -19,8 +19,8 @@
         // 添加扩散阴影
         let bpath = UIBezierPath(roundedRect: CGRect(x: 0, y: -10, width: popBox.width, height: popBox.height + 20), cornerRadius: 8)
         popBoxBg.layer.shadowColor = UIColor.tg_defaultLabel(withAlpha: 1).cgColor
-        popBoxBg.layer.shadowOffset = CGSize(width: 0, height: 0)
-        popBoxBg.layer.shadowOpacity = 0.5
+        popBoxBg.layer.shadowOffset = CGSize(width: 0, height: 0);
+        popBoxBg.layer.shadowOpacity = 0.5;
         popBoxBg.layer.shadowPath = bpath.cgPath</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>BED10202-5599-4814-908A-EEFD13391A3A</string>

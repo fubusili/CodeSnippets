@@ -3,27 +3,31 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_list_data_total_model</string>
+	<string>x_list_model</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    var total: Int = 0
+	<string>    var total: NSNumber?
     var list: [TGCloudDrivePreviewItem]?
-    var stat: Int = 0
+    var stat: NSNumber?
     
-    public static func modelContainerPropertyGenericClass() -&gt; [String: Any]? {
-        return ["list": TGCloudDrivePreviewItem.self]
+    static func modelContainerPropertyGenericClass() -&gt; [String : Any]? {
+        return ["list":TGCloudDrivePreviewItem.classForCoder()
+        ]
     }
     
-    public static func modelCustomPropertyMapper() -&gt; [String: Any]? {
+    public static func modelCustomPropertyMapper() -&gt; [String : Any]? {
         return ["list": ["data", "list"]]
     }
     
     // 自定义字段
     var listTotal: Int {
-        return total
+        if let total = total  {
+            return total.intValue
+        }
+        return 0
     }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>203D5E84-2604-49DA-8384-4912B8A9E153</string>
@@ -32,7 +36,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>list  data total</string>
+	<string>list model data</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -10,12 +10,12 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>private lazy var collectionViewLayout: UICollectionViewFlowLayout = {
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = itemSize
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
-        return layout
+        let collectionViewLayout = UICollectionViewFlowLayout()
+        collectionViewLayout.itemSize = itemSize
+        collectionViewLayout.scrollDirection = .horizontal
+        collectionViewLayout.minimumLineSpacing = 0
+        collectionViewLayout.minimumInteritemSpacing = 0
+        return collectionViewLayout
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>2E6664F5-E973-44AC-83C1-E53AA2A76BBC</string>

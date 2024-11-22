@@ -35,7 +35,7 @@ extension TGClueHomeRecommendCell: TGToolTagCollectionViewLayoutDelegate {
         // 更新collection view 高度，从而更新 table view cell 高度(设置自适应高度)
     }
     
-    func collectionView(_ collectionView: UICollectionView, indexPath: IndexPath) -&gt; String? {
+    func collectionView(_ collectionView: UICollectionView, indexPath: IndexPath) -&gt; String {
         return tags[indexPath.row].name ?? ""
     }
 }</string>

@@ -9,12 +9,12 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    // 刘海屏下拉刷新隐藏处理
-    if UIView.tg_topInsets &gt; 20 {
-        tableView.mj_header.ignoredScrollViewContentInsetTop = -UIView.tg_topInsets
-        // 自动渐隐
-        tableView.mj_header.isAutomaticallyChangeAlpha = true
-    }</string>
+	<string>// 刘海屏下拉刷新隐藏处理
+        if UIView.tg_topInsets &gt; 20 {
+            tableView.mj_header.ignoredScrollViewContentInsetTop = -UIView.tg_topInsets
+            // 自动渐隐
+            tableView.mj_header.isAutomaticallyChangeAlpha = true
+        }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>8674386D-C5ED-4433-8F56-8334E02AFD94</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -26,6 +26,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>2</integer>
+	<integer>0</integer>
 </dict>
 </plist>

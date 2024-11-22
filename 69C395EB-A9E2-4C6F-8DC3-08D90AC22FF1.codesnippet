@@ -3,15 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_adjust_insets</string>
+	<string>x_scroll_adjust_insets</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>// 解决跳转 scroll view 偏移问题
-// 解决scrollView下移问题
-&lt;#tableView#&gt;.contentInsetAdjustmentBehavior = .never</string>
+if #available(iOS 11.0, *) {
+    pageScrollView.contentInsetAdjustmentBehavior = .never
+}
+else {
+    self.automaticallyAdjustsScrollViewInsets = false
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>69C395EB-A9E2-4C6F-8DC3-08D90AC22FF1</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -19,7 +23,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>adjust insets列表列表下移</string>
+	<string>adjust scroll insets</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

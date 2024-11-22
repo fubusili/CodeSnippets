@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_base_tableview</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>class TGFClueEnterpriseListView: UIView {
+    
+    var list: [TGFClueEnterpriseListItem] = []
+
+    var listModel: TGFClueEnterpriseListModel? {
+        didSet {
+            if oldValue != listModel {
+                if let list = listModel?.data, list.count &gt; 0 {
+                    self.list = list
+                }
+                else {
+                    list.removeAll()
+                }
+                tableView.reloadData()
+            }
+        }
+    }
+    
+    var listTotal: Int {
+        var total: Int = 0
+        list.enumerated().forEach { (index, item) in
+            if let num = item.total?.intValue {
+                total += num
+            }
+        }
+        return total
+    }
+    
+    var listCount: Int {
+        return list.count
+    }
+    
+    lazy var tableView: UITableView = {
+        let tableView = setupTableView(.zero, self, self, .plain)
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.showsVerticalScrollIndicator = false
+        registerCell(withTableView: tableView, TGFClueEnterpriseListCell.self)
+        registerCellHeader(withTableView: tableView, TGCommonTableViewHeader.self)
+        tableView.estimatedRowHeight = 100
+        tableView.backgroundColor = .tg_globalBackgroundGray()
+        return tableView
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupSubviews()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension TGFClueEnterpriseListView {
+    private func setupSubviews() {
+        addSubview(self.tableView)
+        tableView.mas_makeConstraints({ make in
+            make?.edges.equalTo()(self)
+        })
+    }
+}
+
+extension TGFClueEnterpriseListView: UITableViewDelegate, UITableViewDataSource, TGToolTableViewProtocol {
+    
+    func numberOfSections(in tableView: UITableView) -&gt; Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+        return listCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
+        let cell = setupCell(withTableView: tableView, cellClass: TGFClueEnterpriseListCell.self)
+        cell.selectionStyle = .none
+        if indexPath.row &lt; list.count {
+            cell.setupModel(list[indexPath.row])
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -&gt; UIView? {
+        
+        let header = setupCellHeaderView(withTableView: tableView, headerClass: TGCommonTableViewHeader.self)
+        header.title = "近7天新增 -- "
+        header.hightLightColor = UIColor(hexString: "#FA5246")
+        header.count = listTotal
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -&gt; CGFloat {
+        return 37
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0BAEB82A-4795-48FD-B2E7-57C114C7D1E8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>base table view</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

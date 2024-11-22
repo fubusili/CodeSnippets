@@ -9,9 +9,9 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>lazy var arrow: UIImageView = {
-        let icon = UIImageView()
-        icon.image = UIImage(named: "common_arrow")
+	<string>lazy var arrow: TGUIAvatarView = {
+        let icon = TGUIAvatarView()
+        icon.image = UIImage(named: "tgf_cell_arrow_right")
         return icon
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>
@@ -21,7 +21,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>箭头图片</string>
+	<string>cell arrow icon</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>x_collection_masonry</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>collectionView.mas_makeConstraints({ make in
+            make?.left.equalTo()(titleLabel)?.offset()(-4)
+            make?.right.equalTo()(titleLabel)
+            make?.top.equalTo()(titleLabel.mas_bottom)?.offset()(-6)
+            make?.height.mas_equalTo()(31)
+        })</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>74C697A2-CCB3-4187-BF29-86388F6D7937</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string></string>
+	<key>IDECodeSnippetTitle</key>
+	<string>collection masonry</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_table_property</string>
+	<string>x_tableview_property</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -13,9 +13,9 @@
         let view = setupTableView(.zero, self, self, .plain)
         view.showsHorizontalScrollIndicator = false
         view.showsVerticalScrollIndicator = false
+        registerCell(withTableView: view, TGFStrengthPopViewCell.self)
         view.estimatedRowHeight = 55
         view.backgroundColor = .white
-        view.registerCell(cellClass: UITableViewCell.self)
         return view
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>

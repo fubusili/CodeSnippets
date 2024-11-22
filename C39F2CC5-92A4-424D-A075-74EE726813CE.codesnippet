@@ -3,52 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_setup_nodata_view</string>
+	<string>x_show_nodata_view</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// MARK: no data View
-extension TGCustomerPublicPoolListView {
-    private func showNetErrView() {
-        netErrView.removeFromSuperview()
-        addSubview(netErrView)
-        netErrView.snp.makeConstraints { make in
-            make.edges.equalTo(tableView)
-        }
-    }
-
-    private func hideNetErrView() {
-        netErrView.removeFromSuperview()
-    }
-
-    private func showNoDataView() {
-        emptyView.removeFromSuperview()
-        addSubview(emptyView)
-        emptyView.snp.makeConstraints { make in
-            make.edges.equalTo(tableView)
-        }
-    }
-
-    private func hideNoDataView() {
-        emptyView.removeFromSuperview()
-    }
-
-    func updateErrViewStatus(_ isRequestFail: Bool) {
-        let count = listModel?.list?.count ?? 0
-        if count &gt; 0 {
-            hideNetErrView()
-            hideNoDataView()
-        }
-        else if count == 0, isRequestFail {
-            showNetErrView()
-        }
-        else {
-            showNoDataView()
-        }
-    }
-}</string>
+	<string>    private func updateNoData() {
+        noDataView.isHidden = listCount &gt; 0
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>C39F2CC5-92A4-424D-A075-74EE726813CE</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -56,7 +19,7 @@ extension TGCustomerPublicPoolListView {
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>setup update no data view empty</string>
+	<string>update no data view</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

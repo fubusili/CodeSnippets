@@ -17,24 +17,24 @@
     }
 }
 private lazy var collectionView: UICollectionView = {
-    let view = setupCollectionView(CGRect.zero, self, self, collectionViewLayout)
-    view.backgroundColor = .clear
-    view.showsHorizontalScrollIndicator = false
-    view.showsVerticalScrollIndicator = false
-//    view.isUserInteractionEnabled = false
-    registerCollectionCell(view, TGToolTagCollectionViewCell.self)
-    return view
+    let collectionView = setupCollectionView(CGRect.zero, self, self, collectionViewLayout)
+    collectionView.backgroundColor = .clear
+    collectionView.showsHorizontalScrollIndicator = false
+    collectionView.showsVerticalScrollIndicator = false
+//    collectionView.isUserInteractionEnabled = false
+    registerCollectionCell(collectionView, TGToolTagCollectionViewCell.self)
+    return collectionView
 }()
 
 private lazy var collectionViewLayout: TGToolTagCollectionViewLayout = {
-    let layout = TGToolTagCollectionViewLayout()
-    layout.delegate = self
-    layout.itemHeight = 20
-    layout.tagInnerMargin = 10
-    layout.itemSpacing = 4
-    layout.isJustShowSingleRow = true
-    layout.itemFont = UIFont.systemFont(ofSize: 12)
-    return layout
+    let collectionViewLayout = TGToolTagCollectionViewLayout()
+    collectionViewLayout.delegate = self
+    collectionViewLayout.itemHeight = 20
+    collectionViewLayout.tagInnerMargin = 10
+    collectionViewLayout.itemSpacing = 4
+    collectionViewLayout.isJustShowSingleRow = true
+    collectionViewLayout.itemFont = UIFont.systemFont(ofSize: 12)
+    return collectionViewLayout
 }()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>A69D97B6-0B2A-4285-954E-7564F0AD6001</string>

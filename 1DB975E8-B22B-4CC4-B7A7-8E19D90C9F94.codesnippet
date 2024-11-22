@@ -11,16 +11,10 @@
 	<key>IDECodeSnippetContents</key>
 	<string>    lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [&lt;#view#&gt;])
-        cancelBtn.snp.makeConstraints {
-            $0.left.top.bottom.equalToSuperview()
-        }
-        comfirmBtn.snp.makeConstraints {
-            $0.right.top.bottom.equalToSuperview()
-        }
         stackView.axis = .horizontal
         stackView.spacing = 0
         stackView.alignment = .center
-        stackView.distribution = .fillProportionally
+        stackView.distribution = .fillEqually
         return stackView
     }()</string>
 	<key>IDECodeSnippetIdentifier</key>

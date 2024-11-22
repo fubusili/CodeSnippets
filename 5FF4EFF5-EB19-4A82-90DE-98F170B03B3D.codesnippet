@@ -9,8 +9,8 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>view.tg_analyticsPageKey = TGEventTracking.pageViewKey.&lt;#page#&gt;.selfRawValue
-view.tg_analyticsPageNameCn = TGEventTracking.pageViewKey.&lt;#page#&gt;.rawValue</string>
+	<string>view.tg_analyticsPageKey = TGEventTrackingType.pageViewKey.RouteView.selfRawValue
+view.tg_analyticsPageNameCn = TGEventTrackingType.pageViewKey.RouteView.rawValue</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>5FF4EFF5-EB19-4A82-90DE-98F170B03B3D</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -18,7 +18,7 @@ view.tg_analyticsPageNameCn = TGEventTracking.pageViewKey.&lt;#page#&gt;.rawValu
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>埋点页面曝光</string>
+	<string>event tracking page expolure 埋点页面曝光</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

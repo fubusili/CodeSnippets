@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_update_cell</string>
+	<string>x_setup_cell_item</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>public func updateCell(_ model: TGKwaiCreateMissionMultiSelectItem?) {
-    guard let model = model else {return}
-    
-}</string>
+	<string>    public func setupItem(_ item: TGCloudDriveFileItem?) {
+        guard let item = item else {return}
+        &lt;#cell#&gt;
+    }</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>C68D232B-57F5-4378-A898-6AC82B6BF94D</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -20,7 +20,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>update cell</string>
+	<string>set up cell item</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

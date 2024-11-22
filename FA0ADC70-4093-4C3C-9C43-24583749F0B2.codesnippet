@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>x_alert_pop_action</string>
+	<string>x_alert_pop_up_button</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
@@ -14,7 +14,7 @@
             content: "删除后将无法恢复",
             buttons: [TGUIButtonBar.cancelButton, TGUIButtonBar.submitButton],
             click: { [weak self] index in
-                guard let self = self else {return}
+                guard let `self` = self else  {return}
                 if index == 1 {
                     self.show(withText: nil)
                     if self.toDoModel != nil, let id = self.toDoModel?._id as? String {
@@ -29,10 +29,6 @@
                     }
                 }
         })
-        alert.titleFont = .systemFont(ofSize: 18, weight: .medium)
-        alert.titleColor = UIColor.tg_defaultLabel(withAlpha: 1)
-        alert.contentColor = UIColor.tg_defaultLabel(withAlpha: 0.85)
-        alert.leftRightPadding = 32
         alert.show()</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>FA0ADC70-4093-4C3C-9C43-24583749F0B2</string>
@@ -41,7 +37,7 @@
 	<key>IDECodeSnippetSummary</key>
 	<string></string>
 	<key>IDECodeSnippetTitle</key>
-	<string>内容、操作弹窗、按钮、我知道了</string>
+	<string>pop up alert view</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

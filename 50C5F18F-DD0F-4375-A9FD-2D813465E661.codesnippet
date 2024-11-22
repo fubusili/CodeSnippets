@@ -9,7 +9,7 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>/// 初始化子视图布局
+	<string>/// 初始化子视图
 private func setupSubviews() {
         &lt;#function body#&gt;
     }</string>
